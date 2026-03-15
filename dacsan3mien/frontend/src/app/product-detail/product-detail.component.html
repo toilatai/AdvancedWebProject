@@ -1,0 +1,60 @@
+<div class="product-details-container">
+  <div class="thumbnail-images">
+    <img *ngFor="let image of images; let i = index" [src]="image" alt="Thumbnail" (click)="selectImage(i)"
+      [class.selected]="i === selectedImageIndex" />
+  </div>
+
+  <div class="main-image">
+    <img [src]="images[selectedImageIndex]" alt="{{ product.product_name }}" />
+  </div>
+
+  <div class="product-info">
+    <p>Mã: {{ product._id || 'OLED42C2PSA' }}</p>
+    <p>
+      Tình trạng:
+      <span [ngClass]="{ 'in-stock': product.stocked_quantity > 0, 'out-of-stock': product.stocked_quantity === 0 }">
+        {{ product.stocked_quantity > 0 ? 'còn hàng (' + product.stocked_quantity + ')' : 'hết hàng' }}
+      </span>
+    </p>
+
+    <h1>{{ product.product_name || 'QUEENTIN' }}</h1>
+
+    <div class="rating-container">
+      <span *ngIf="isHovering" class="rating-value">{{ product.rating }}</span>
+      <div class="rating">
+        <div *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" class="star" (mouseenter)="onStarHover()"
+          (mouseleave)="onStarLeave()">
+          <div class="star-full" [ngStyle]="{ width: getStarFillPercentage(product.rating, star) + '%' }"></div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="product-specs">
+      <li><b><i>{{ product.product_detail || 'Thiết kế gọng vuông với độ cao mặt kính cùng phần bản lề tinh xảo đem đến
+        một diện mạo hiện đại và sang trọng.' }}</i></b></li><hr>
+      <li>Nguyên liệu chọn lọc 100% tự nhiên </li>
+      <li>Sản xuất thủ công theo công thức truyền thống</li>
+      <li>Đảm bảo an toàn vệ sinh thực phẩm</li>
+      <li>Hương vị đậm đà, chuẩn vị vùng miền </li>
+    </ul>
+
+    <h3 class="price">
+      <span *ngIf="getOriginalPrice() !== null" class="original-price">
+        {{ getOriginalPrice() | currency: 'VND' }}
+      </span>
+      <span class="current-price">{{ product.unit_price | currency: 'VND' }}</span>
+    </h3>
+
+    <div class="purchase-actions">
+      <div class="quantity-selector">
+        <button (click)="decreaseQuantity()" [disabled]="isOutOfStock">-</button>
+        <input type="number" [(ngModel)]="quantity" min="0" (input)="validateQuantity()" [disabled]="isOutOfStock" />
+        <button (click)="increaseQuantity()"
+          [disabled]="isOutOfStock || quantity >= product.stocked_quantity">+</button>
+      </div>
+      <button (click)="buyNow()" class="btn btn-primary" [disabled]="isOutOfStock">Mua ngay</button>
+      <button (click)="addToCart($event)" class="btn btn-outline-primary" [disabled]="isOutOfStock">Thêm vào
+        giỏ</button>
+    </div>
+  </div>
+</div>

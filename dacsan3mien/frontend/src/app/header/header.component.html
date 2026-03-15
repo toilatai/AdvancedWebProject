@@ -1,0 +1,416 @@
+<nav class="navbar navbar-expand-lg fixed-top" [class.scrolled]="isScrolled">
+  <div class="container-fluid d-flex align-items-center justify-content-between p-0">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse flex-grow-1 justify-content-start" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/">Trang chủ</a></li>
+        <li class="nav-item dropdown" (mouseenter)="showProductsDropdown = true" (mouseleave)="hideProductsDropdown()">
+          <a class="nav-link text-primary fw-medium px-2 dropdown-toggle" routerLink="/catalog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sản phẩm
+          </a>
+          <ul class="dropdown-menu mega-menu" [class.show]="showProductsDropdown">
+            <li class="dropdown-item">
+              <a routerLink="/catalog" class="text-decoration-none">
+                <i class="fas fa-th-large me-2"></i>Tất cả sản phẩm
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            
+            <!-- Miền Bắc -->
+            <li class="dropdown-item dropdown-submenu">
+              <a href="#" class="text-decoration-none">
+                <i class="fas fa-map-marker-alt me-2"></i>Miền Bắc
+                <i class="fas fa-chevron-right float-end"></i>
+              </a>
+              <ul class="dropdown-menu submenu">
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hà Nội'}" class="text-decoration-none">
+                    Hà Nội
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hải Phòng'}" class="text-decoration-none">
+                    Hải Phòng
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Quảng Ninh'}" class="text-decoration-none">
+                    Quảng Ninh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Lào Cai'}" class="text-decoration-none">
+                    Lào Cai
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Sơn La'}" class="text-decoration-none">
+                    Sơn La
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Điện Biên'}" class="text-decoration-none">
+                    Điện Biên
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Lai Châu'}" class="text-decoration-none">
+                    Lai Châu
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Yên Bái'}" class="text-decoration-none">
+                    Yên Bái
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hòa Bình'}" class="text-decoration-none">
+                    Hòa Bình
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Thái Nguyên'}" class="text-decoration-none">
+                    Thái Nguyên
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bắc Giang'}" class="text-decoration-none">
+                    Bắc Giang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bắc Ninh'}" class="text-decoration-none">
+                    Bắc Ninh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hà Nam'}" class="text-decoration-none">
+                    Hà Nam
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Nam Định'}" class="text-decoration-none">
+                    Nam Định
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Ninh Bình'}" class="text-decoration-none">
+                    Ninh Bình
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Thái Bình'}" class="text-decoration-none">
+                    Thái Bình
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hưng Yên'}" class="text-decoration-none">
+                    Hưng Yên
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hải Dương'}" class="text-decoration-none">
+                    Hải Dương
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Vĩnh Phúc'}" class="text-decoration-none">
+                    Vĩnh Phúc
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Tuyên Quang'}" class="text-decoration-none">
+                    Tuyên Quang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Phú Thọ'}" class="text-decoration-none">
+                    Phú Thọ
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bắc Kạn'}" class="text-decoration-none">
+                    Bắc Kạn
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Cao Bằng'}" class="text-decoration-none">
+                    Cao Bằng
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Miền Trung -->
+            <li class="dropdown-item dropdown-submenu">
+              <a href="#" class="text-decoration-none">
+                <i class="fas fa-map-marker-alt me-2"></i>Miền Trung
+                <i class="fas fa-chevron-right float-end"></i>
+              </a>
+              <ul class="dropdown-menu submenu">
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Thanh Hóa'}" class="text-decoration-none">
+                    Thanh Hóa
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Nghệ An'}" class="text-decoration-none">
+                    Nghệ An
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hà Tĩnh'}" class="text-decoration-none">
+                    Hà Tĩnh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Quảng Bình'}" class="text-decoration-none">
+                    Quảng Bình
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Quảng Trị'}" class="text-decoration-none">
+                    Quảng Trị
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Thừa Thiên Huế'}" class="text-decoration-none">
+                    Thừa Thiên Huế
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Đà Nẵng'}" class="text-decoration-none">
+                    Đà Nẵng
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Quảng Nam'}" class="text-decoration-none">
+                    Quảng Nam
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Quảng Ngãi'}" class="text-decoration-none">
+                    Quảng Ngãi
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bình Định'}" class="text-decoration-none">
+                    Bình Định
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Phú Yên'}" class="text-decoration-none">
+                    Phú Yên
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Khánh Hòa'}" class="text-decoration-none">
+                    Khánh Hòa
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Ninh Thuận'}" class="text-decoration-none">
+                    Ninh Thuận
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bình Thuận'}" class="text-decoration-none">
+                    Bình Thuận
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Miền Nam -->
+            <li class="dropdown-item dropdown-submenu">
+              <a href="#" class="text-decoration-none">
+                <i class="fas fa-map-marker-alt me-2"></i>Miền Nam
+                <i class="fas fa-chevron-right float-end"></i>
+              </a>
+              <ul class="dropdown-menu submenu">
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'TP. Hồ Chí Minh'}" class="text-decoration-none">
+                    TP. Hồ Chí Minh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bình Phước'}" class="text-decoration-none">
+                    Bình Phước
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Tây Ninh'}" class="text-decoration-none">
+                    Tây Ninh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bình Dương'}" class="text-decoration-none">
+                    Bình Dương
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Đồng Nai'}" class="text-decoration-none">
+                    Đồng Nai
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bà Rịa - Vũng Tàu'}" class="text-decoration-none">
+                    Bà Rịa - Vũng Tàu
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Long An'}" class="text-decoration-none">
+                    Long An
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Tiền Giang'}" class="text-decoration-none">
+                    Tiền Giang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bến Tre'}" class="text-decoration-none">
+                    Bến Tre
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Trà Vinh'}" class="text-decoration-none">
+                    Trà Vinh
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Vĩnh Long'}" class="text-decoration-none">
+                    Vĩnh Long
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Đồng Tháp'}" class="text-decoration-none">
+                    Đồng Tháp
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'An Giang'}" class="text-decoration-none">
+                    An Giang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Kiên Giang'}" class="text-decoration-none">
+                    Kiên Giang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Cần Thơ'}" class="text-decoration-none">
+                    Cần Thơ
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Hậu Giang'}" class="text-decoration-none">
+                    Hậu Giang
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Sóc Trăng'}" class="text-decoration-none">
+                    Sóc Trăng
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Bạc Liêu'}" class="text-decoration-none">
+                    Bạc Liêu
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{province: 'Cà Mau'}" class="text-decoration-none">
+                    Cà Mau
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <li><hr class="dropdown-divider"></li>
+            
+            <!-- Loại sản phẩm -->
+            <li class="dropdown-item dropdown-submenu">
+              <a href="#" class="text-decoration-none">
+                <i class="fas fa-tags me-2"></i>Loại sản phẩm
+                <i class="fas fa-chevron-right float-end"></i>
+              </a>
+              <ul class="dropdown-menu submenu">
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{category: 'dried_food'}" class="text-decoration-none">
+                    <i class="fas fa-seedling me-2"></i>Thực phẩm khô
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{category: 'beverages'}" class="text-decoration-none">
+                    <i class="fas fa-coffee me-2"></i>Thức uống
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{category: 'cakes_candies'}" class="text-decoration-none">
+                    <i class="fas fa-cookie-bite me-2"></i>Bánh kẹo
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{category: 'gift_set'}" class="text-decoration-none">
+                    <i class="fas fa-gift me-2"></i>Set quà tặng
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a routerLink="/catalog" [queryParams]="{category: 'spices'}" class="text-decoration-none">
+                    <i class="fas fa-pepper-hot me-2"></i>Gia vị
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/" fragment="events">Sự
+            kiện</a></li>
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/about">Giới thiệu</a></li>
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/contact">Liên hệ</a></li>
+        <li class="nav-item"><a class="nav-link text-primary fw-medium px-2" routerLink="/contact"
+            fragment="faqs">FAQs</a></li>
+      </ul>
+    </div>
+
+    <a class="navbar-brand mx-auto" routerLink="/">
+      <img src="assets/Logo.png" alt="Logo" width="120">
+    </a>
+
+    <div class="d-flex align-items-center justify-content-end flex-grow-1"
+      [ngClass]="{'is-logged-in': isLoggedIn, 'not-logged-in': !isLoggedIn}">
+      <form class="d-none d-lg-flex align-items-center" (submit)="performSearch(searchInput)">
+        <img src="assets/finding.png" width="24" alt="Search Icon" class="me-2">
+        <input #searchInput class="form-control form-control-sm me-2" type="search" name="search"
+          placeholder="Tìm kiếm sản phẩm....." aria-label="Search" [(ngModel)]="searchTerm" style="width: 150px;">
+      </form>
+
+      <div class="d-flex align-items-center ms-2">
+        <a routerLink="/cart" class="position-relative me-3">
+          <img src="assets/cart_icon.png" width="24" alt="Cart Icon">
+          <span *ngIf="cartItemCount > 0"
+            class="position-absolute top-0 start-100 translate-middle badge bg-danger text-white rounded-pill">
+            {{ cartItemCount }}
+          </span>
+        </a>
+
+        <a routerLink="/personal-info" class="position-relative me-3">
+          <i class="fa fa-user-circle"></i>
+        </a>
+
+        <a *ngIf="isAdmin" routerLink="/admin" class="btn btn-admin-panel btn-sm px-3 me-2">
+          <i class="fas fa-cog me-1"></i>Admin Panel
+        </a>
+
+        <button class="btn btn-outline-primary btn-sm px-3" (click)="handleLogout()">
+          {{ isLoggedIn ? 'Đăng xuất' : 'Đăng nhập' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
