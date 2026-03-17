@@ -1,0 +1,367 @@
+[{
+  "_id": {
+    "$oid": "68fe6567e59faa87dadc90b2"
+  },
+  "userId": "674afe9cbed2a43e66e370ad",
+  "selectedItems": [
+    {
+      "_id": "6722a52740de4c60aa968b1d",
+      "quantity": 1,
+      "unit_price": 129000
+    },
+    {
+      "_id": "6722a3cf40de4c60aa968b1c",
+      "quantity": 1,
+      "unit_price": 129000
+    }
+  ],
+  "totalPrice": 258000,
+  "paymentMethod": "cash_on_delivery",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Thái Nguyên",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "cẩn thận"
+  },
+  "createdAt": {
+    "$date": "2025-10-26T18:16:07.216Z"
+  },
+  "status": "completed",
+  "address": "123 Đường Test, Quận 1, TP.HCM",
+  "customerName": "Khách hàng Test",
+  "phone": "0123456789"
+},
+{
+  "_id": {
+    "$oid": "68fe658ae59faa87dadc90b3"
+  },
+  "userId": "674afe9cbed2a43e66e370ad",
+  "selectedItems": [
+    {
+      "_id": "6722aa2540de4c60aa968b1e",
+      "quantity": 1,
+      "unit_price": 59000
+    }
+  ],
+  "totalPrice": 59000,
+  "paymentMethod": "cash_on_delivery",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": ""
+  },
+  "createdAt": {
+    "$date": "2025-10-26T18:16:42.756Z"
+  },
+  "status": "delivered",
+  "address": "123 Đường Test, Quận 1, TP.HCM",
+  "customerName": "Khách hàng Test",
+  "phone": "0123456789"
+},
+{
+  "_id": {
+    "$oid": "69007ae3667dd438276ebf5d"
+  },
+  "userId": "674afe9cbed2a43e66e370ad",
+  "selectedItems": [
+    {
+      "_id": "6722aa2540de4c60aa968b1e",
+      "quantity": 1,
+      "unit_price": 59000
+    }
+  ],
+  "totalPrice": 59000,
+  "paymentMethod": "cash_on_delivery",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Lạng Sơn",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": ""
+  },
+  "createdAt": {
+    "$date": "2025-10-28T08:12:19.351Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "6905db6c8b69f37f56ffb2a3"
+  },
+  "userId": "674afe9cbed2a43e66e370ad",
+  "selectedItems": [
+    {
+      "_id": "6722ac5740de4c60aa968b20",
+      "quantity": 1,
+      "unit_price": 459000
+    }
+  ],
+  "totalPrice": 459000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Lạng Sơn",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "cần thận khi giao"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T10:05:32.591Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "690bb36c8fc8ad850ce8acc2"
+  },
+  "userId": "6748a2252baeb369ec435ac1",
+  "selectedItems": [
+    {
+      "_id": "6722a3cf40de4c60aa968b1c",
+      "quantity": 1,
+      "unit_price": 129000
+    }
+  ],
+  "totalPrice": 129000,
+  "paymentMethod": "cash_on_delivery",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Sơn La",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": ""
+  },
+  "createdAt": {
+    "$date": "2025-11-05T20:28:28.566Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "690bb47a8fc8ad850ce8acc3"
+  },
+  "userId": "6748a2252baeb369ec435ac1",
+  "selectedItems": [
+    {
+      "_id": "6722a52740de4c60aa968b1d",
+      "quantity": 1,
+      "unit_price": 129000
+    }
+  ],
+  "totalPrice": 129000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Lạng Sơn",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": ""
+  },
+  "createdAt": {
+    "$date": "2025-11-05T20:32:58.215Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "6911c389c36e917a21ebfb1e"
+  },
+  "userId": "6911c330c36e917a21ebfb1d",
+  "selectedItems": [
+    {
+      "_id": "68f92a5abaa0c870977ecd1c",
+      "quantity": 1,
+      "unit_price": 850000
+    }
+  ],
+  "totalPrice": 850000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "gói quà giúp mình nha ạ"
+  },
+  "createdAt": {
+    "$date": "2025-11-10T10:50:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T10:56:44.418Z"
+  },
+  "status": "delivered"
+},
+{
+  "_id": {
+    "$oid": "69121296c36e917a21ebfb21"
+  },
+  "userId": "69121236c36e917a21ebfb20",
+  "selectedItems": [
+    {
+      "_id": "68f9272ebaa0c870977ecd15",
+      "quantity": 1,
+      "unit_price": 68000
+    }
+  ],
+  "totalPrice": 68000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": ""
+  },
+  "createdAt": {
+    "$date": "2025-11-10T16:28:06.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T16:28:06.132Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "6912172ac36e917a21ebfb23"
+  },
+  "userId": "691216c6c36e917a21ebfb22",
+  "selectedItems": [
+    {
+      "_id": "68f927aebaa0c870977ecd16",
+      "quantity": 1,
+      "unit_price": 95000
+    }
+  ],
+  "totalPrice": 95000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "5/3 phan văn trị, gò vấp, thành phố Hồ Chí Minh",
+    "province": "Thành phố Hồ Chí Minh",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "gói quà giúp mình"
+  },
+  "createdAt": {
+    "$date": "2025-11-10T16:47:38.667Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T16:47:38.667Z"
+  },
+  "status": "in_progress"
+},
+{
+  "_id": {
+    "$oid": "69124df8c36e917a21ebfb26"
+  },
+  "userId": "69124d8ec36e917a21ebfb25",
+  "selectedItems": [
+    {
+      "_id": "6722a52740de4c60aa968b1d",
+      "quantity": 2,
+      "unit_price": 129000
+    }
+  ],
+  "totalPrice": 258000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "5/3 phan văn trị, gò vấp, thành phố Hồ Chí Minh",
+    "province": "Tỉnh Lai Châu",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "Gói quà để mang đi tặng"
+  },
+  "createdAt": {
+    "$date": "2025-11-10T20:41:28.180Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T22:29:42.817Z"
+  },
+  "status": "delivered"
+},
+{
+  "_id": {
+    "$oid": "69126421c36e917a21ebfb2c"
+  },
+  "userId": "691263acc36e917a21ebfb2b",
+  "selectedItems": [
+    {
+      "_id": "691251eac36e917a21ebfb29",
+      "quantity": 2,
+      "unit_price": 95000
+    }
+  ],
+  "totalPrice": 190000,
+  "paymentMethod": "internet_banking",
+  "shippingAddress": {
+    "firstName": "Dương",
+    "lastName": "Minh",
+    "company": "",
+    "address": "Phú Nhuận",
+    "province": "Tỉnh Điện Biên",
+    "district": "",
+    "ward": "",
+    "email": "duongtanminh2306@gmail.com",
+    "phone": "0792098518",
+    "additionalNotes": "gói lại để tặng quà"
+  },
+  "createdAt": {
+    "$date": "2025-11-10T22:16:01.260Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T22:30:01.739Z"
+  },
+  "status": "completed"
+}]
