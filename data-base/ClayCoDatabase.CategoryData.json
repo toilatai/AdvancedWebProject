@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "672740d9676967533a18d65c"
+  },
+  "Name": "Ceramic/ Pot",
+  "Description": "Premium ceramic pots with smooth or matte finishes, ideal for food storage, decor, or kitchen use. Available in various shapes and colors."
+},
+{
+  "_id": {
+    "$oid": "672740f4676967533a18d65d"
+  },
+  "Name": "Ceramic/ Bowls",
+  "Description": "Elegant, microwave-safe ceramic bowls in solid colors and patterned designs, perfect for serving salads, soups, and sides.\n"
+},
+{
+  "_id": {
+    "$oid": "67274119676967533a18d65e"
+  },
+  "Name": "Ceramic/ Teapot",
+  "Description": "Heat-retaining ceramic teapots with ergonomic handles and spouts, available in classic and modern designs to enhance your tea experience.\n"
+},
+{
+  "_id": {
+    "$oid": "67274127676967533a18d65f"
+  },
+  "Name": "Ceramic/ Plate",
+  "Description": "Scratch-resistant ceramic plates with minimalist to intricate designs, adding sophistication to any dining setup."
+},
+{
+  "_id": {
+    "$oid": "67274136676967533a18d660"
+  },
+  "Name": "Ceramic/ Planter",
+  "Description": "Durable ceramic planters with drainage holes, suitable for indoor and outdoor spaces, in both minimalist and decorative styles.\n"
+},
+{
+  "_id": {
+    "$oid": "67274168676967533a18d661"
+  },
+  "Name": "Plant/ Indoor Plant",
+  "Description": "Variety of indoor plants that thrive in low to moderate light conditions, perfect for decorating homes and offices while purifying air naturally."
+},
+{
+  "_id": {
+    "$oid": "6727417f676967533a18d662"
+  },
+  "Name": "Plant/ Succulent",
+  "Description": "Low-maintenance, drought-tolerant succulents in various shapes and colors, ideal for adding a touch of greenery to indoor spaces with minimal upkeep."
+},
+{
+  "_id": {
+    "$oid": "67274194676967533a18d663"
+  },
+  "Name": "Plant/ Air Plant",
+  "Description": "Unique air plants that grow without soil, ideal for creative arrangements in terrariums or mounted on decorative stands."
+},
+{
+  "_id": {
+    "$oid": "672741a5676967533a18d664"
+  },
+  "Name": "Plant/ Outdoor Plant",
+  "Description": "Hardy outdoor plants suitable for gardens and balconies, available in a range of species to complement various outdoor spaces."
+},
+{
+  "_id": {
+    "$oid": "672741bd676967533a18d665"
+  },
+  "Name": "Plant/ Cactus",
+  "Description": "A collection of low-maintenance cacti that require minimal water, perfect for indoor displays or as unique garden additions"
+},
+{
+  "_id": {
+    "$oid": "672741e0676967533a18d666"
+  },
+  "Name": "Flower/ Perennials",
+  "Description": "Beautiful perennials that bloom year after year, adding vibrant colors to gardens with minimal care required."
+},
+{
+  "_id": {
+    "$oid": "672741f7676967533a18d667"
+  },
+  "Name": "Flower/ Annual",
+  "Description": "Bright and colorful annual flowers that bloom for one season, ideal for creating vibrant flower beds and seasonal displays."
+},
+{
+  "_id": {
+    "$oid": "6727420b676967533a18d668"
+  },
+  "Name": "Flower/ Wildflower",
+  "Description": "Native wildflowers that bring natural beauty and attract pollinators, suitable for naturalizing areas or creating a meadow-like garden."
+},
+{
+  "_id": {
+    "$oid": "6727421b676967533a18d669"
+  },
+  "Name": "Flower/ Bulb",
+  "Description": "Seasonal flower bulbs that produce beautiful blooms, perfect for adding a splash of color to gardens in spring and summer."
+},
+{
+  "_id": {
+    "$oid": "6727422f676967533a18d66a"
+  },
+  "Name": "Flower/ Tropical Flower",
+  "Description": "Exotic tropical flowers with vibrant colors and unique shapes, ideal for creating a lush, tropical garden atmosphere."
+}]

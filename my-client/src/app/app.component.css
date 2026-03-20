@@ -1,3 +1,110 @@
-*{
-  font: 1000 13px/15px Roboto, sans-serif;
+:host {
+  display: block;
+}
+
+.floating-chat {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 2000;
+}
+
+.chat-bubble {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 0;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--clay-primary), var(--clay-primary-deep));
+  box-shadow: 0 16px 28px rgba(60, 89, 83, 0.28);
+  animation: floatBubble 2.3s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.chat-box {
+  width: min(92vw, 340px);
+  margin-bottom: 12px;
+  border: 1px solid var(--clay-border);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--clay-shadow);
+  overflow: hidden;
+}
+
+.chat-box__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #eef5f3, #f7f3ea);
+  border-bottom: 1px solid var(--clay-border);
+}
+
+.chat-box__header button {
+  border: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.chat-box__messages {
+  padding: 10px;
+  max-height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bot-msg,
+.user-msg {
+  max-width: 92%;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 9px 11px;
+  border-radius: 12px;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background: #f2f5f4;
+  color: var(--clay-text);
+}
+
+.user-msg {
+  align-self: flex-end;
+  background: #dcebe8;
+  color: #20302e;
+}
+
+.chat-box__questions {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--clay-border);
+}
+
+.chat-box__questions button {
+  text-align: left;
+  font-size: 12px;
+  border: 1px solid var(--clay-border);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--clay-text-soft);
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.chat-box__questions button:hover {
+  border-color: var(--clay-primary);
+  color: var(--clay-primary-deep);
 }

@@ -17,6 +17,7 @@ export class ProductDetailComponent {
   currentUser: any;
   isLogin: boolean = false;
   categories: any[] | undefined;
+  isLoading: boolean = true;
 
   declare window: Window & typeof globalThis;
   constructor(
@@ -26,7 +27,7 @@ export class ProductDetailComponent {
     private _authService: AuthService
   ) {
     activateRoute.paramMap.subscribe((param) => {
-      let productId = param.get('id');
+      const productId = param.get('id');
       if (productId != null) {
         this.searchProduct(productId);
       }
@@ -80,14 +81,24 @@ export class ProductDetailComponent {
   }
 
   searchProduct(productId: string) {
+    this.isLoading = true;
     this._service.getProduct(productId).subscribe({
       next: (data) => {
         this.product = data;
+        this.isLoading = false;
       },
       error: (err) => {
         this.errMessage = err;
+        this.isLoading = false;
       },
     });
+  }
+
+  private getProductId(product: any): string {
+    if (!product || product._id == null) return '';
+    if (typeof product._id === 'string') return product._id;
+    if (product._id.$oid) return product._id.$oid;
+    return String(product._id);
   }
 
   increase() {
@@ -167,7 +178,9 @@ export class ProductDetailComponent {
     );
   }
   viewProductDetail(f: any) {
-    this.router.navigate(['app-product-detail', f._id]).then(() => {
+    const productId = this.getProductId(f);
+    if (!productId) return;
+    this.router.navigate(['app-product-detail', productId]).then(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
   }

@@ -1,4 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global admin light-pastel theme */
+:root {
+	--admin-bg: #f5f6f2;
+	--admin-surface: #ffffff;
+	--admin-surface-soft: #eef1eb;
+	--admin-primary: #6d8f89;
+	--admin-primary-deep: #4f6f69;
+	--admin-accent: #d8b487;
+	--admin-text: #253130;
+	--admin-text-soft: #647271;
+	--admin-border: #dde3dc;
+	--admin-shadow: 0 16px 34px rgba(43, 68, 64, 0.12);
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "Manrope", "Segoe UI", sans-serif;
+	color: var(--admin-text);
+	background: var(--admin-bg);
+	position: relative;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background:
+		linear-gradient(rgba(245, 246, 242, 0.34), rgba(245, 246, 242, 0.34)),
+		url('/assets/images/backgroundwebsite.jpg') center/cover no-repeat;
+	opacity: 0.9;
+	filter: blur(6px);
+	transform: scale(1.03);
+	pointer-events: none;
+}

@@ -38,7 +38,7 @@ export class ProductsService {
       responseType: 'text',
     };
     return this._http
-      .get<any>('/productss/detail/' + ProductId, requestOptions)
+      .get<any>('/products/detail/' + ProductId, requestOptions)
       .pipe(
         map((res) => JSON.parse(res) as Products),
         retry(3),

@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67285f32a89abab50934451d"
+  },
+  "Name": "belivel",
+  "phonenumber": "0398527409",
+  "Mail": "yolome@gmail.com",
+  "Address": "KTX Khu B, đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Dĩ An, Bình Dương",
+  "password": "1593f7671959854ebaa1a62a6c91fff83ba78a2609abe42b1b4a897102b45ebe2ec23366135f6e77b879fd2748cc3922530a968619c78a11df3b585bf1de8f12",
+  "gender": "",
+  "agreement": true,
+  "salt": "087579faa4ddc559655c10b6e21de42d"
+},
+{
+  "_id": {
+    "$oid": "67289c3ad02b5ada3990aa42"
+  },
+  "Name": "belivet",
+  "phonenumber": "0398527409",
+  "Mail": "yoloyolo@gmail.com",
+  "Address": "KTX Khu B, đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Dĩ An, Bình Dương",
+  "password": "32adf029223f942d463ccfffc245b27a99f4ffb64c2185cf10807d87702b87eab7a15e5966d7795161eb7b2aa0fe682e439be5f1cacdeb9ff26bc1b3f9c58877",
+  "gender": "",
+  "agreement": true,
+  "salt": "9f526a72426d7786ea41b2a5c4e0563d"
+}]

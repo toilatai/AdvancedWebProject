@@ -1,3 +1,26 @@
 <app-header *ngIf="!['/app-login', '/app-signup', '/app-forgot-password', '/app-signup-otp', '/app-reset-password', '/app-change-psw', '/app-payment-momo', '/app-payment-banking', '/app-sign-up-successfully'].includes(router.url)"></app-header>
 <router-outlet></router-outlet>
 <app-footer *ngIf="!['/app-login', '/app-signup', '/app-forgot-password', '/app-signup-otp', '/app-reset-password', '/app-change-psw', '/app-payment-momo', '/app-payment-banking', '/app-sign-up-successfully'].includes(router.url)"></app-footer>
+
+<div class="floating-chat" *ngIf="!['/app-login', '/app-signup', '/app-forgot-password', '/app-signup-otp', '/app-reset-password', '/app-change-psw', '/app-payment-momo', '/app-payment-banking', '/app-sign-up-successfully'].includes(router.url)">
+	<button class="chat-bubble" (click)="toggleChat()" aria-label="Open chat">
+		<span>Chat</span>
+	</button>
+
+	<div class="chat-box" *ngIf="isChatOpen">
+		<div class="chat-box__header">
+			<strong>ClayCo Assistant</strong>
+			<button (click)="toggleChat()">x</button>
+		</div>
+
+		<div class="chat-box__messages">
+			<div *ngFor="let item of chatHistory" [class.user-msg]="item.sender === 'user'" [class.bot-msg]="item.sender === 'bot'">
+				{{ item.text }}
+			</div>
+		</div>
+
+		<div class="chat-box__questions">
+			<button *ngFor="let q of quickQuestions" (click)="askQuickQuestion(q)">{{ q }}</button>
+		</div>
+	</div>
+</div>

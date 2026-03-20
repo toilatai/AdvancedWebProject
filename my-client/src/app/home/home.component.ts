@@ -79,8 +79,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     type(); // Bắt đầu typing ngay lập tức
   }
 
+  private getProductId(product: any): string {
+    if (!product || product._id == null) return '';
+    if (typeof product._id === 'string') return product._id;
+    if (product._id.$oid) return product._id.$oid;
+    return String(product._id);
+  }
+
   viewProductDetail(f: any) {
-    this.router.navigate(['app-product-detail', f._id]).then(() => {
+    const productId = this.getProductId(f);
+    if (!productId) return;
+    this.router.navigate(['app-product-detail', productId]).then(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
   }

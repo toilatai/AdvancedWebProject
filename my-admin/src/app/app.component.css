@@ -1,0 +1,23 @@
+:host {
+	display: block;
+}
+
+.admin-shell {
+	min-height: 100vh;
+}
+
+.admin-content {
+	margin-left: 280px;
+	min-height: 100vh;
+}
+
+.admin-shell.login-mode .admin-content {
+	margin-left: 0;
+}
+
+@media (max-width: 1080px) {
+	.admin-content {
+		margin-left: 0;
+		padding-top: 78px;
+	}
+}

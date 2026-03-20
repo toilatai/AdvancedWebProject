@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global light-pastel theme for client app */
+:root {
+	--clay-bg: #f7f5f0;
+	--clay-bg-soft: #fffdf8;
+	--clay-surface: #ffffff;
+	--clay-surface-muted: #f1efe8;
+	--clay-primary: #6e8f89;
+	--clay-primary-deep: #4f6f69;
+	--clay-accent: #d7ab7b;
+	--clay-text: #26312f;
+	--clay-text-soft: #66716f;
+	--clay-border: #e2ddd3;
+	--clay-shadow: 0 14px 36px rgba(66, 79, 75, 0.1);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Manrope", "Segoe UI", sans-serif;
+	color: var(--clay-text);
+	background: var(--clay-bg);
+	position: relative;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background:
+		linear-gradient(rgba(247, 245, 240, 0.3), rgba(247, 245, 240, 0.3)),
+		url('/assets/images/backgroundwebsite.jpg') center/cover no-repeat;
+	opacity: 0.92;
+	filter: blur(6px);
+	transform: scale(1.03);
+	pointer-events: none;
+}
+
+a {
+	color: inherit;
+}

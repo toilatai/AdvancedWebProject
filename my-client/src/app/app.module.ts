@@ -34,6 +34,7 @@ import { CustomizeProductDetailComponent } from './customization/customize-produ
 import { AboutUsComponent } from './aboutus/aboutus.component';
 import { WorkshopComponent } from './workshop/workshop.component';
 import { BlogComponent } from './blog/blog.component';
+import { RevealOnScrollDirective } from './directives/reveal-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { BlogComponent } from './blog/blog.component';
     CustomizeProductDetailComponent,
     WorkshopComponent,
     BlogComponent,
+    RevealOnScrollDirective,
     
   ],
   imports: [
