@@ -1,0 +1,45 @@
+<div class="imgbg"><img src="assets/images/BG.png"></div>
+<div class="frame">
+  <div class="content">
+    <div class="imggt"><a href="app-home"><img src="assets/images/GT(1).png"></a></div>
+    <form (ngSubmit)="onSubmit()" class="login_form">
+      <h3>WELCOME TO CLAYCO</h3>
+      <p class="bold">LOG IN</p>
+      <div class="container">
+        <div class="container__input">
+          <div>
+            <div class="container__input--item">
+              <div class="input--content">
+                <input type="text" placeholder="Phone Number" name="phonenumber" [(ngModel)]="phonenumber" required
+                  (blur)="checkPhoneNumber()" id="phone" value="{{ phonenumber }}" />
+                <span class="material">*</span>
+              </div>
+            </div>
+            <div *ngIf="!isPhoneNumberValid" class="error-message">Phone Number is unavailabale!</div>
+          </div>
+          <div class="container__input--item">
+            <div class="input--content">
+              <input type="password" placeholder="Password" name="psw" [(ngModel)]="password" required id="password"
+                value="{{ password }}" />
+              <span class="material">*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container__checkbox">
+          <input type="checkbox" name="remember" class="checkbox" [(ngModel)]="rememberMe" id="rememberMe" />
+          <label for="rememberMe">Remember password</label>
+          <a href="app-forgot-password">Forgot password?</a>
+        </div>
+
+        <div class="login_button">
+          <button type="submit">LOG IN</button>
+        </div>
+      </div>
+      <div class="content--bottom">
+        <p>Don't have an account ?</p>
+        <a href="app-signup">Sign Up now</a>
+      </div>
+    </form>
+  </div>
+</div>

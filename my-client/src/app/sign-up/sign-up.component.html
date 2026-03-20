@@ -1,0 +1,89 @@
+<div class="imgbg"><img src="assets/images/BG.png"></div>
+
+<div class="content">
+  <div class="imggt"><a href="app-home"><img src="assets/images/GT(1).png"></a></div>
+  <form class="login_form">
+    <h3 class="header">SIGN UP</h3>
+    <div class="container">
+      <div class="container__input">
+        <div class="container__input--item name">
+          <label for="name">Full name: <span class="material">*</span> </label>
+          <div class="input--content">
+            <input type="text" name="name" id="name" placeholder="Full name" [(ngModel)]="account.Name" #name="ngModel"
+              required />
+          </div>
+        </div>
+
+        <div>
+          <div class="container__input--item phone">
+            <label for="phonenumber">Phone number:<span class="material">*</span> </label>
+            <div class="input--content">
+              <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone number"
+                [(ngModel)]="account.phonenumber" #name="ngModel" (blur)="checkPhoneNumber()" required />
+            </div>
+          </div>
+          <div *ngIf="!isPhoneNumberValid" class="error-message">Phone number is unavailabale!</div>
+        </div>
+
+        <div>
+          <div class="container__input--item email">
+            <label for="email">Email:</label><span class="material">*</span>
+            <div class="input--content">
+              <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="account.Mail" #name="ngModel"
+                (blur)="checkMail()">
+
+            </div>
+          </div>
+
+          <div class="error-message-mail" *ngIf="!isValidEmail">Email is unavailabale!</div>
+        </div>
+
+        <div class="container__input--item address">
+          <label for="address">Address: <span class="material">*</span> </label>
+          <div class="input--content">
+            <input type="text" name="address" id="address" placeholder="Address" [(ngModel)]="account.Address"
+              #name="ngModel" />
+          </div>
+        </div>
+
+        <div class="container__input--item gender">Sex:
+          <input class="radio" type="radio" name="gender" id="male" [value]="'Male'" required />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" [value]="'Female'" required />
+          <label for="female">Female</label>
+        </div>
+
+        <div class="container__input--item pass">
+          <label for="psw">Password: <span class="material">*</span> </label>
+          <div class="input--content">
+            <input type="password" name="psw" id="psw" placeholder="Password" [(ngModel)]="account.password"
+              #name="ngModel" (blur)="onChecked()" #passwordInput required />
+          </div>
+        </div>
+
+        <div class="container__input--item repass">
+          <label for="enterpsw">Confirm password: <span class="material">*</span> </label>
+          <div class="input--content">
+            <input type="password" name="psw" id="enterpsw" placeholder="Confirm password"
+              [(ngModel)]="confirmPassword" #confirmPasswordInput (blur)="checkPasswordsMatch()" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="condition">
+        <input type="checkbox" name="type" id="type" value="condition" [(ngModel)]="account.agreement" /> 
+        <label for="type">I have read and agree to 
+          Clayco's General Terms and Conditions and Privacy Policy.</label> <span style="color:red">*</span>
+      </div>
+      <div>
+        <button (click)="postAccount()" (click)="postCustomer()" (click)="postDelivery()" class="login_button">SIGN UP</button>
+      </div>
+
+    </div>
+
+    <div class="content--bottom">
+      <p>Have an account ?</p>
+      <a href="app-login">Login now</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,283 @@
+.home_banner {
+  background-color: white;
+  text-align: left;
+  vertical-align: top;
+  color: #8AA3A0;
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.2fr 6.5fr 3fr;
+  font: 1000 38px/50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bar {
+  padding-top: 1px;
+  height: 100px;
+  width: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url('../../assets/images/orgcup.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  width:1340px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.6;
+  transform: skewX(-30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.centered-text {
+  text-align: center;
+  margin: 0 auto;
+  width: 1000px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top:0;
+  margin-top: 10px;
+  height: 300px;
+  margin-bottom: -60px;
+
+    /* Glassmorphism styling */
+    background: rgba(196, 179, 179, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#startcustomize {
+  margin-bottom: 150px;
+  z-index: 1;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: black;
+  color:white;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 32px;
+  color: rgb(131, 69, 69);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: rgb(159, 144, 144);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  z-index: 10;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
+}
+
+.hide-arrow {
+  display: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
+.main-container {
+  overflow: hidden;
+  position: relative;
+  width: 1519px;
+  height: 680px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.slogan {
+  display: block;
+  margin: 76px auto 0;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 51px;
+  text-align: center;
+  letter-spacing: 2.1px;
+}
+
+.flex-row-dd {
+  display: flex;
+  justify-content: space-around;
+  width: 1322px;
+  margin: 64px auto 0;
+}
+
+.customized-mug, .customized-mug-1, .reserved-for-aria {
+  width: 362px;
+  height: 306px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling effect */
+  position: relative; /* Allows for overlay positioning */
+  overflow: hidden; /* Ensures overlay stays within border-radius */
+}
+
+.customized-mug {
+  background-image: url('/assets/images/031412b3-f865-486b-92c8-35d5f71bd30b.png');
+}
+
+.customized-mug-1 {
+  background-image: url('/assets/images/fdaae05e8c6bb0c5c02dae51c5f253cc5a710674.png');
+}
+
+.reserved-for-aria {
+  background-image: url('/assets/images/8b4fdebc-5433-4c8e-8c6e-e6a001d63a9d.png');
+}
+
+/* Hover effect to zoom in and enhance shadow */
+.customized-mug:hover, .customized-mug-1:hover, .reserved-for-aria:hover {
+  transform: scale(1.05); /* Zoom-in effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Light overlay for brightening effect */
+.customized-mug::before, .customized-mug-1::before, .reserved-for-aria::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+  transition: background 0.3s ease; /* Smooth transition for overlay */
+  border-radius: 20px; /* Match border-radius of the images */
+  mix-blend-mode: screen; /* Brightening effect */
+}
+
+/* Lighten overlay effect on hover */
+.customized-mug:hover::before, .customized-mug-1:hover::before, .reserved-for-aria:hover::before {
+  background: rgba(255, 255, 255, 0.5); /* More transparent on hover to increase brightness */
+}
+
+
+.flex-row-eb {
+  display: flex;
+  justify-content: space-around;
+  width: 1322px;
+  margin: 14px auto;
+  text-align: center;
+}
+.flex-row-beb {
+  display: flex;
+  justify-content: space-around;
+  width: 1322px;
+  margin-top: 20px ;
+  margin-left: 100px ;
+  text-align: center;
+}
+
+.designed-beige-coffe, .carved-smile-cups, .product-name, .price, .price-2, .price-3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  color: #000000;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-to-cart {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 16px;
+  padding: 10px 24px; /* Adjust padding for height */
+  width: 150px; /* Set fixed width for a longer button */
+  border: none;
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer;
+  margin-top: 10px; /* Space between price and button */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth grow effect */
+  text-align: center;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.1); /* Grow on hover */
+  background-color: #333; /* Darker shade on hover */
+}

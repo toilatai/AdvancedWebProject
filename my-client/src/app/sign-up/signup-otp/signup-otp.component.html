@@ -1,0 +1,28 @@
+<div class="imgbg"><img src="assets/images/BG.png"></div>
+<div class="content">
+  <div class="imggt"><a href="app-home"><img src="assets/images/GT(1).png"></a></div>
+  <form action="app-home" method="get" class="signup_form">
+    <div class="content--top"><a href="app-signup">Back</a></div>
+    <h2>CONFIRM SIGN UP</h2>
+    <div class="bold">
+      <p>The OTP verification code has been sent to your phone number.</p>
+      <p>Please check your phone.</p>
+    </div>
+
+    <div class="input--content">
+      <input type="text" id="otp-input" placeholder="Enter OTP code" [(ngModel)]="verificationCode" name="verificationCode"
+        (blur)="checkVerificationCode()">
+    </div>
+    <div *ngIf="!isVerificationCodeValid" class="error-message">Invalid verification code</div>
+
+
+    <div class="content--bottom">
+      <p><b>Didn't receive the code ?</b></p>
+      <a id="otp-button" (click)="resend()" style="cursor: pointer">Send code again.</a>
+    </div>
+
+    <div>
+      <button type="submit" class="login_button" (click)="onComplete()" style="cursor: pointer">CONFIRM</button>
+    </div>
+  </form>
+</div>

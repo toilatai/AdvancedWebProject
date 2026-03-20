@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif; 
+}
+  
+  .main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 1440px;
+    height: 1092px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .flex-column-dad {
+    position: absolute;
+    width: 886px;
+    height: 858px;
+    top: 113px;
+    left: 64px;
+    font-size: 0px;
+    z-index: 4;
+  }
+  .donec-mug {
+    display: block;
+    position: relative;
+    height: 54px;
+    margin: 0 0 0 0;
+    color: #000000;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.008px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  .price {
+    display: block;
+    position: relative;
+    height: 25px;
+    margin: 0 0 0 10px;
+    color: #000000;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    z-index: 3;
+  }
+  .crush-stone-mug {
+    position: relative;
+    width: 886px;
+    height: 740px;
+    margin: 39px 0 0 0;
+    background: url(../../../assets/images/product_image.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 4;
+    border-radius: 10px;
+  }
+  .flex-column-db {
+    position: absolute;
+    width: 384px;
+    height: 702px;
+    top: 277px;
+    left: 991px;
+    font-size: 0px;
+    z-index: 8;
+  }
+  .let-make-you {
+    display: block;
+    position: relative;
+    height: 34px;
+    margin: 0 0 0 0;
+    color: #000000;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    z-index: 6;
+  }
+  .line {
+    position: relative;
+    width: 370.034px;
+    height: 5px;
+    margin: 4px 0 0 0;
+    background: url(../../../assets/images/bar_customize.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 5;
+  }
+  .choose-customise {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 365px;
+    height: 44px;
+    margin: 32px 0 0 0;
+    color: #000000;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+    letter-spacing: 1px;
+    z-index: 7;
+  }
+  .button-customize {
+    position: relative;
+    width: 348px;
+    height: 75px;
+    margin: 316px 0 0 17px;
+    cursor: pointer;
+    background: #000000;
+    border: none;
+    border-radius: 30px;
+  }
+  .customize {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 256px;
+    height: 40px;
+    top: 18px;
+    left: 46px;
+    color: #ffffff;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.256px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1.2px;
+    z-index: 9;
+  }
+  .add-to-cart {
+    position: relative;
+    width: 348px;
+    height: 75px;
+    margin: 41px 0 0 17px;
+    cursor: pointer;
+    background: #000000;
+    border: none;
+    z-index: 1;
+    border-radius: 30px;
+  }
+  .add-to-cart-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 256px;
+    height: 40px;
+    top: 18px;
+    left: 46px;
+    color: #ffffff;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.256px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1.2px;
+    z-index: 10;
+  }
+  .custom-made {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 365px;
+    height: 44px;
+    margin: 32px 0 0 19px;
+    color: #b3adad;
+    font-family: Montserrat, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 8;
+  }
+  

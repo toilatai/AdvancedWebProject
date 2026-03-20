@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+<div class="main-container">
+  <div class="flex-row-ec">
+    <div class="image"></div>
+    <span class="donec-mug">Serving bowl</span>
+    <span class="item-no-bq">With a comfortable handle, smooth finish, and ideal capacity, <BR>this bowl is perfect for all types of beverages to food. <BR>It’s also an ideal gift for loved ones, friends, or even yourself.</span
+    ><span class="item-type-ceramic">Item Type: Ceramic</span
+    ><span class="price">$40</span>
+    <div class="rectangle"><span class="add-to-cart" (click)="addToCart()">Add to Cart</span></div>
+    <div class="rectangle-1">
+      <span class="customize" (click)="scrollToForm()">Customize</span>
+    </div>
+  </div>
+  <div class="form-container" id="formContainer">
+    <span class="make-your-own">Let make your own!</span>
+    <span class="choose-position">Choose the position</span>
+    <div class="droplist-position">
+      <select class="position-select">
+        <option selected>In front of the item</option>
+        <option>Behind the item</option>
+        <option>Above the item</option>
+        <option>Below the item</option>
+        <option>Custom position</option>
+    </select>
+    </div>
+
+    
+    
+    
+    
+    <span class="add-your-special">Add your special touch, type your text!</span>
+    <input type="text" class="input-box" placeholder="e.g: Handcrafted, Personalized, Unique Design, Custom Color">
+
+    <span class="upload-image">Or wanna show us your inspiration, upload an image!</span>
+    <input type="file" class="input-box">
+
+    <span class="special-details">Any special details?</span>
+    <input type="text" class="input-box" placeholder="e.g: Gold trim, Extra cushioning, Eco-friendly materials, Engraved initials">
+
+    <button class="rectangle-5">
+      <span class="finish-add-to-cart" (click)="addToCart()">Finish and Add to Cart</span>
+    </button>
+
+    <div class="other-requirements-chat-with-us">
+      <a href="mailto:clayco.brand@gmail.com" class="email-link">
+      Other requirements? Chat with us via Email!
+      </a>
+    </div>
+  </div>

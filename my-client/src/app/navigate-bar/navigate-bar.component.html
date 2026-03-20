@@ -1,0 +1,52 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+<header [class.fixed-navbar]="isFixed" (scroll)="onScroll()">
+  <div style="background-color: white; width: 100%;">
+    <div>
+      <nav class="header__menu">
+        <div class="menubar">
+          <a routerLink=""><img src="assets/images/Logo.png"></a>
+          <ul>
+            <li id="home"><a routerLink="">Home</a></li>
+            <li id="product"><a routerLink="/app-category">Products</a></li>
+            <li id="" class="dropdown"><a [routerLink]="['/workshop']">Our Services</a>
+              <div class="dropdown-center">
+                <ul>
+                  <li><a [routerLink]="['/workshop']">Workshop</a></li>
+                  <li><a [routerLink]="['/app-customization']">Customization</a></li>
+                </ul>
+              </div>
+            </li>
+            <li id=""><a [routerLink]="['/blog']">Blog</a></li>
+            <li id="aboutus"><a [routerLink]="['/aboutus']">About Us</a></li>
+            <li>
+              <form class="search" (ngSubmit)="search()">
+                <span class="material-icons-outlined">search</span>
+                <input type="text" placeholder=" Search..." [(ngModel)]="keyword" name="keyword" required>
+                <button type="submit">Search</button>
+              </form>
+            </li>
+            <a [routerLink]="['/app-cart']"><span class="material-icons-outlined">shopping_bag</span></a>
+            <li class="item"><button>{{quantityItem}}</button></li>
+            <a *ngIf="!isLoggedIn"><a [routerLink]="['/app-login']"><span
+                  class="material-icons-outlined">account_circle</span></a></a>
+            <!-- ĐĂNG NHẬP RỒI -->
+            <li>
+              <div class="dropdown--signIn">
+                <div class="content__dropdown--signIn" *ngIf="isLoggedIn">
+                  <span class="material-icons-outlined">account_circle</span>
+                  <span class="username">{{Name}}</span>
+                </div>
+                <ul class="dropdown__menu--item" *ngIf="isLoggedIn">
+                  <li><a [routerLink]="'app-profile'">Your Profile</a></li>
+                  <li><a (click)="logOut()">Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

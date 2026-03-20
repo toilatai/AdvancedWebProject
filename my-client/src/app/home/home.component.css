@@ -1,0 +1,512 @@
+/* Áp dụng font Montserrat cho toàn bộ trang */
+body, .home_banner, .sanpham, .danhmucproduct, .feedback, .main-container, .shipping-handling, .our-services, .service-values, button, a, p, h1, h2, h3, span {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+}
+  
+  .scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color:rgb(159, 144, 144); /* Màu xám nhạt với độ mờ */
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    z-index: 10;
+    animation: bounce 2s infinite;
+  }
+  
+  .scroll-arrow:hover {
+    opacity: 1;
+  }
+  
+  .hide-arrow {
+    display: none;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, 10px);
+    }
+  }
+  
+  .home_banner {
+      text-align: left;
+      vertical-align: top;
+      display: grid;
+      grid-template-columns: 0.1fr 0.1fr 0.2fr 6.5fr 3fr;
+      font: 1000 38px/50px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .bar {
+      padding-top: 1px;
+      height: 100px;
+      width: 8px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/images/potdisplay.png');
+    background-size: 100% 100%; /* Kéo giãn ảnh để lấp đầy cả chiều rộng và chiều cao */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+
+
+.content::before {
+    content: '';
+    position: absolute;
+    left: -100%; /* Bắt đầu từ ngoài bên trái */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.6; /* Độ trong suốt của hiệu ứng gương */
+    transform: skewX(-30deg); /* Tạo hiệu ứng nghiêng cho lớp phủ */
+    animation: shine 3s infinite; /* Lặp lại hiệu ứng */
+    filter: blur(2px); /* Hiệu ứng mờ để trông như gương */
+    mix-blend-mode: screen; /* Tạo hiệu ứng sáng phản chiếu */
+}
+
+@keyframes shine {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.text-container {
+  /* flex: 1;  Xóa dòng này nếu bạn muốn kiểm soát height cụ thể */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-right: 10px;
+  height: 300px;
+  margin-bottom: -80px;
+  
+  /* Glassmorphism styling */
+  background: rgba(196, 179, 179, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#explorecollect {
+    margin-bottom: 150px;
+    z-index: 1;
+
+}
+
+
+button {
+    background-color: white;
+    color:black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: black;
+    color:white;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+  .bold {
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(131, 69, 69);
+    margin-bottom:10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  
+  
+  
+  
+  .image-container img {
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .images-background-big img {
+      height: 300px;
+      width: 100%;
+      background-color: black;
+  }
+  
+  .images-background-small {
+      margin: 0px auto;
+      position: relative;
+      top: -50px;
+      padding: 0 30px;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .container-banner {
+      width: 100%;
+      position: relative;
+      margin: auto;
+      display: flex;
+      padding-left: 100px;
+      align-items: self-end;
+  }
+  
+  
+  
+  .sanpham {
+      font: 1000 38px/50px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding-top: -5px;
+      padding-bottom: -2px;
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .sanpham button {
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.sanpham button:hover {
+    transform: scale(1.1); /* Increase the size by 10% on hover */
+    cursor: pointer;
+}
+
+  .danhmucproduct {
+      font: 1000 38px/50px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      color: BLACK;
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+  }
+  
+  @media (max-width: 1300px) {
+      .danhmucproduct {
+          grid-template-columns: repeat(4, 1fr);
+      }
+  }
+  
+  @media (max-width: 1080px) {
+      .danhmucproduct {
+          grid-template-columns: repeat(3, 1fr);
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .danhmucproduct {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  
+  @media (max-width: 500px) {
+      .danhmucproduct {
+          grid-template-columns: repeat(1, 1fr);
+      }
+  }
+  
+  .product {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -5px;
+  }
+  
+  .product button:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+  }
+  
+  .product-item {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px 0px;
+    width: calc(10%);
+    margin: 5px 15px;
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth scaling and shadow */
+}
+
+.product-item:hover {
+    border: 1px solid #8AA3A0;
+    transform: scale(1.05); /* Slightly enlarge the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    cursor: pointer;
+}
+
+  .product-item--img img {
+      width: 250px;
+      height: 200px;
+      border-radius: 12px;
+  }
+  
+  .product-item--info {
+      font-size: 14px;
+      margin: 6px 0;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  
+  .product-item--price {
+      font-weight: bold;
+      color: BLACK;
+      margin: 0 0 8px 0;
+  }
+  
+  .product-item--add {
+    background-color: BLACK;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: WHITE;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    height: 30px;
+    font-size: 12px;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.product-item--add:hover {
+    transform: scale(1.1); /* Scales the button up by 10% */
+}
+
+  
+  .feedback {
+      background-color: #f9f9f9;
+      font: 1000 38px/50px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      color: black;
+      flex-direction: column;
+      display: grid;
+      justify-content: space-between;
+      margin-bottom:20px;
+  }
+  
+  .feedbackdetails {
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.25fr 4.75fr 1fr;
+  }
+  
+  
+  /* Redesigned Section 6 CSS */
+  .main-container {
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    
+    .our-services {
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+    }
+    
+    .service-container {
+      display: flex;
+      justify-content: center; /* Căn giữa các thẻ .service-item */
+      align-items: center; /* Căn giữa theo chiều dọc nếu container có chiều cao cố định */
+      flex-wrap: wrap; /* Đảm bảo các phần tử không bị tràn */
+      gap: 20px; /* Điều chỉnh khoảng cách giữa các thẻ */
+      padding: 20px; /* Thêm khoảng trống để không bị sát lề */
+  }
+  
+  .service-item {
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 450px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 5px; /* Giảm khoảng cách theo chiều dọc */
+  }
+  
+    .service-item img {
+      width: 100%;
+      height: 350PX;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .service-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin: 15px 0;
+    }
+    
+    .service-description {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .service-button {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      background-color: #8AA3A0;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .service-button:hover {
+      background-color: #8AA3A0;
+    }
+    
+    .service-values {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:#ccd7d5 ;
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 40px;
+  }
+  
+  .value-item {
+      text-align: center;
+      flex: 1;
+      padding: 20px;
+  }
+  
+  .value-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+  }
+  
+  .value-description {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #333;
+  }
+  
+  .icon-style {
+      font-size: 30px;
+      margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .service-values {
+          flex-direction: column;
+      }
+  
+      .value-item {
+          padding: 10px;
+      }
+  }
+  .icon-style {
+    font-size: 36px; /* Kích thước icon */
+    color: #ffffff; /* Màu trắng cho icon */
+    background-color: #000000; /* Nền đen cho hình tròn */
+    padding: 25px; /* Tạo khoảng trống xung quanh icon */
+    border-radius: 50%; /* Biến icon thành hình tròn */
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Để tạo hiệu ứng phản chiếu */
+    box-shadow: 0 0 0 5px #8AA3A0; /* Viền trắng bao quanh icon */
+  }
+  
+  
+  
+  .typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid; /* Hiệu ứng con trỏ */
+    animation: typing 3s steps(15) 1s forwards, blink 0.7s step-end infinite alternate;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: black; }
+  }
+  

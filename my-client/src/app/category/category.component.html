@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <!-- Navigation Bar -->
+  <div class="category-navigation" style="color:white">
+    <strong>PRODUCTS</strong>
+    <hr>
+    <a (click)="selectCategory('')">All products</a>
+    <div class="checklist categories" *ngFor="let category of categories">
+      <ul>
+        <li>
+          <a (click)="selectCategory(category.Name)">{{category.Name}}</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <!-- Product Section -->
+  <div class="product-section">
+    <div *ngFor="let category of categories">
+    </div>
+    <p style="font-weight: bold; font-size: 30px; color: BLACK; text-align: center;"> Products
+      {{selectedCategory.toUpperCase()}}</p>
+    <div class="danhmucproduct">
+      <div class="product" *ngFor="let product of filterProducts()">
+        <div class="product-item">
+          <div (click)="viewProductDetail(product)">
+            <div class="product-item--img">
+              <img src="{{ product.Image }}" style="width: 180px;">
+            </div>
+            <p class="product-item--info">{{ product.Name }}</p>
+            <p class="product-item--price">{{ product.Price }} $</p>
+          </div>
+          <button class="product-item--add" (click)="addToCart(product)">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

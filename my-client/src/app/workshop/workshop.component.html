@@ -1,0 +1,301 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+    <div class='main-container'>
+      <!--Mở đầu trang-->
+      <div class='img'>
+        <div class='flex-column-b'>
+          <div class='name-input'>
+            <div class='flex-row' >
+              <span class='days' style="color: #A02334">DAYS</span>
+              <span class='hours' style="color: #A02334">HOURS</span>
+              <span class='minutes' style="color: #A02334">MINUTES</span>
+              <span class='seconds' style="color: #A02334">SECONDS</span>
+            </div>
+            <div class="flex-row-fb">
+              <div class="khung">
+                <span class="number-10">{{ days }}</span> <!-- Days -->
+              </div>
+              <div class="khung-13">
+                <span class="number-15">{{ hours }}</span> <!-- Hours -->
+              </div>
+              <div class="khung-14">
+                <span class="number-00">{{ minutes }}</span> <!-- Minutes -->
+              </div>
+              <div class="khung-15">
+                <span class="number-08">{{ seconds }}</span> <!-- Seconds -->
+              </div>
+            </div>                                
+              <form class="contact-form" #contactForm="ngForm" id="contactForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+                <div class="form-group">
+                  <input 
+                    #fullNameInput="ngModel"
+                    type="text" 
+                    id="full-name" 
+                    name="full-name" 
+                    class="rectangle-16" 
+                    placeholder="Full Name" 
+                    required 
+                    ngModel />
+                  <div *ngIf="fullNameInput.invalid && fullNameInput.touched" class="error-message">
+                    Please enter your full name.
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <input 
+                    #emailInput="ngModel"
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="rectangle-17" 
+                    placeholder="Email" 
+                    required 
+                    ngModel 
+                    pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" 
+                    title="Please enter a valid email with gmail.com domain." />
+                  <div *ngIf="emailInput.invalid && emailInput.touched" class="error-message">
+                    Please enter a valid email with gmail.com domain.
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <input 
+                    #phoneInput="ngModel"
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    class="phone" 
+                    placeholder="Phone" 
+                    required 
+                    ngModel 
+                    pattern="^[0-9]{10}$" 
+                    title="Please enter a valid 10-digit phone number." />
+                  <div *ngIf="phoneInput.invalid && phoneInput.touched" class="error-message">
+                    Please enter a valid 10-digit phone number.
+                  </div>
+                </div>
+              
+                <button type="submit" class="label-send">
+                  <span class="dont-miss-out">SEND</span>
+                </button>
+              </form>
+              
+              
+            
+          </div>
+          <span class='flex-column' style="color: #A02334">
+            Don’t Miss Out! <br />
+            Grab Your Exclusive Offer Now!
+          </span>
+        </div>
+        <div class='icicle-inspirations'>
+          <span class='icicle-inspirations-text'>
+            Icicle Inspirations: Crafting Winter in Clay
+          </span>
+          <span class='register-button'>
+            "Step into a world where art meets winter at 'Icicle Inspirations'.
+            This workshop invites you to unleash your creativity, using the
+            elements of the season—frost, snow, and ice—to inspire stunning
+            pottery creations that tell the story of winter's quiet beauty."
+          </span>
+                   
+        </div>
+      </div>
+      <!--About our workshop-->
+      <div class="img-icicle-inspirations">
+        <div class="image-container">
+          <div class="left-image">
+            <img src="assets/images/download.jpg" alt="Download Image">
+          </div>
+          <div class="right-images">
+            <img src="assets/images/xmastree.jpg" alt="Xmas Tree Image">
+            <img src="assets/images/dish.jpg" alt="Dish Image">
+          </div>
+        </div>
+        <div class="text-container">
+          <span class="spring-into-clay" style="color:black; text-align:left">
+            About our workshops
+          </span>
+          <span class="summer-hues-in-bloom">
+            <p style="text-align: justify;color:black; line-height: 1.6;">
+              At Clayco, our workshops blend creativity and craftsmanship, inviting you to explore pottery inspired by nature’s beauty. Over the past year, we’ve hosted three seasonal workshops, bringing together over 200 pottery enthusiasts and resulting in 300 unique pieces. Each workshop is crafted to capture the essence of the season, guiding beginners and experts alike through every step, from molding clay to perfecting details.
+              <br><br>
+              This winter, join us for <em>Icicle Inspirations</em>, where we’ll transform clay into winter-inspired art, capturing the beauty of frost and snow. Reserve your spot today and let your creativity shine!
+            </p>
+          </span>
+        </div>
+      </div>
+      
+      
+      <!--Spring workshop-->
+      <div class='explore-pottery-creation'>
+        <div class='creative-relaxing-space'></div>
+        <span class='vibrant-personalized-pottery'>
+          Spring into Clay: Pottery Workshop
+        </span>
+        <span class='attendees-learned' style="line-height: 1.6;">
+          "Spring into Clay: Pottery Workshop," hosted by Clayco, was a truly enchanting experience that invited participants to immerse themselves in the art of pottery inspired by the vitality of spring. From hands-on clay shaping to adding vibrant floral and seasonal motifs, attendees explored a range of techniques, each step sparking creativity and joy. The workshop’s relaxed, welcoming atmosphere offered a perfect escape, where both beginners and seasoned potters could unwind, connect, and bring their spring-inspired visions to life. It was more than just a workshop—it was a journey into creativity, nature, and self-expression!
+        </span>
+      </div>
+
+      <!--Summer workshop-->
+      <div class='cozy-environment' >
+        <div class='box-b' >
+          <div class='wrapper-6'>
+            <span class='text-28' style="color:black">"Summer Hues in Bloom"</span>
+            <div class='flex-row-f'>
+              <div class='n'></div>
+              <div class='n-1e'></div>
+              <div class='n-1f'></div>
+            </div>
+            <div class='flex-row-b'>
+              <span class='attendees-learned-pottery-making' style="color:black">
+                Attendees crafted unique pottery, learning how to mold, shape, and add personal touches that turned each piece into a true work of art.
+              </span>
+              <span class='cozy-environment-creativity' style="color:black">
+                The warm, welcoming atmosphere fostered creativity and connection, making it an unforgettable experience for art lovers.
+              </span>
+              <span class='proudly-took-home-creations' style="color:black">
+                By the end, everyone proudly took home their vibrant summer-inspired creations, filled with a sense of accomplishment and joy.
+              </span>
+            </div>
+            <span class="summer-hues-in-bloom-23" style="line-height: 1.6; text-align: center; background-color: white; padding: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px;">
+              "Summer Hues in Bloom" transformed our studio into a haven of color and creativity. Guided by skilled artisans, participants crafted pottery infused with personal flair, bold colors, and intricate patterns. With natural light filling the space, laughter and inspiration flowed as imaginations bloomed. Each one-of-a-kind piece captured the spirit of summer, making the workshop a joyful escape where creativity and connections blossomed.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class='flex-row-ad'>
+        <div class='n-24'></div>
+        <span class='harvest-creations-pottery-autumn'>
+          "Harvest Creations: <br />
+          Pottery in Autumn"
+        </span>
+        <div class='rectangle-25'></div>
+        <span class='harvest-creations-pottery-autumn-success' style="line-height: 1.6;">
+          "Harvest Creations: Pottery in Autumn" brought together over 50 participants to celebrate fall’s beauty through pottery. Hosted by Clayco, the workshop offered a warm, creative space where attendees crafted over 70 unique pieces inspired by autumn leaves, pumpkins, and harvest motifs. The event was filled with energy and enthusiasm, making it a memorable artistic experience for all.
+        </span>
+        <div class='rectangle-26'>
+          <div class='n-27'></div>
+          <span class='text-32'>70+</span>
+          <span class='text-33'>50+</span>
+          <span class='participants'>Participants</span>
+          <span class='potteries'>Potteries</span>
+        </div>
+      </div>
+      <div class='flower-pot'></div>
+      <span class='recap-harvest-creations-pottery-autumn'>
+        Recap of Harvest Creations: Pottery in Autumn"
+      </span>
+      <div class='flex-row-ec'>
+        <div class='n-28'></div>
+        <div class='n-29'></div>
+        <div class='n-2a'></div>
+      </div>
+      <div class='flex-row-fa'>
+        <span class='recap-1'>#Recap 1</span>
+        <span class='recap-2'>#Recap 2</span>
+        <span class='recap-3'>#Recap 3</span>
+      </div>
+      <div class='draaischijven-scaled'>
+        <div class='flex-row-cef'>
+          <div class='rectangle-2b'></div>
+          <div class='rectangle-2c'>
+            <span class='winter-workshop'>
+              WARM UP YOUR WINTER WITH OUR WORKSHOP -
+            </span>
+            <span class='register-now-save-big'>
+              REGISTER NOW AND SAVE BIG!
+            </span>
+          </div>
+          <span class='off-50-percent'>OFF 50%</span>
+        </div>
+        <span class='icicle-inspirations-winter-crafting'>
+          Icicle Inspirations: Crafting Winter in Clay
+        </span>
+        <button type="button" class="button-2d" (click)="scrollToForm()">
+          <span class="register-now" (click)="scrollToRegister()">REGISTER NOW</span>
+        </button>        
+      </div>
+
+      <!--Thông tin workshop mùa đông-->
+      <div class='frame-2e'>
+        <div class='workshop-lam-gom'></div>
+        <span class='icicle-inspirations-winter-crafting-2f'>
+          INCICLE INSPIRATIONS:
+          <BR> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CRAFTING WINTER IN CLAY
+        </span>
+        <span class='workshop-description'>
+          “This workshop invites you to unleash your creativity, drawing
+          inspiration from frost, snow, and ice to craft beautiful pottery that
+          reflects the quiet beauty of winter."
+        </span>
+        <div class='location'></div>
+        <div class='location-30'></div>
+        <span class='venue'>Venue</span>
+        <span class='date-time'>Date&Time</span>
+        <span class='location-address'>
+          669 National Highway 1, Quarter 6, Linh Xuan Ward, Thu Duc, Ho Chi
+          Minh City.
+        </span>
+        <span class='date-time-details'>
+          8:00 AM to 21:30 PMDecember 8, 2024.
+        </span>
+        <div class='location-31'></div>
+        <div class='location-32'></div>
+        <span class='activities'>Activities</span>
+        <span class='participants-number'>Number of participants</span>
+        <span class='participants-range'>From 60 to 80 participants.</span>
+        <span class='activities-list'>
+          Basic Pottery Guidance. Shaping and Decorating. Painting and
+          Glazing. Photo Session with Your Creations.
+        </span>
+      </div>
+
+      <div class="revieww">
+        
+      </div>
+      <span class='review'>REVIEW</span>
+      <span class='testimonials'>
+        "The Most Authentic Testimonials About Clayco’s Workshops"
+      </span>
+      <div class='flex-row-dc'>
+        <div class='rectangle-55'>
+          <span class='testimonial'>
+            "Clayco’s workshop was an amazing experience! I had never worked
+            with clay before, but the instructors made everything so fun and
+            easy to follow. I walked away with a beautiful piece of pottery and
+            a new hobby!"
+          </span>
+        </div>
+        <div class='testimonial-56'>
+          <span class='testimonial-57'>
+            "The workshop was a perfect blend of learning and creativity! The instructors were patient and knowledgeable. I left with not only a wonderful pottery piece but also a newfound passion for clay art!"
+          </span>
+        </div>
+        <div class='inverted-commas'>
+          <span class='inverted-commas-58'>
+            "Clayco’s workshop was beyond my expectations! The cozy environment and supportive guidance made it easy to try new techniques. Can’t wait to join another session!"
+          </span>
+        </div>
+      </div>
+      <div class='_n-5a'>
+        <div class='_n-5b'></div>
+        <div class='name'></div>
+        <div class='name-5c'></div>
+        <span class='name-5d'>Nguyen Van A</span>
+        <span class='name-5e'>Katy Perry</span>
+        <span class='name-5f'>Taylor Swift</span>
+        <span class='workshop-tag'>
+          #Spring into Clay: Pottery Workshop
+        </span>
+        <span class='workshop-tag-60'>#Summer Hues in Bloom</span>
+        <span class='workshop-tag-61'>
+          #Harvest Creations: Pottery in Autumn
+        </span>
+      </div>
+    </div>
+
+

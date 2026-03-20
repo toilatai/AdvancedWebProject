@@ -1,0 +1,103 @@
+<div class="footer">
+    <!-- Form đăng ký newsletter -->
+<div class="main-container">
+  <span class="latest-offers-text">
+      STAY UP TO DATE ABOUT OUR LATEST OFFERS
+    </span>
+  <div class="frame">
+    <form class="email-form" (submit)="onSubmit()">
+      <div class="input-container">
+        <input
+          type="email"
+          id="emailInput"
+          class="email-input"
+          placeholder="Enter your email address"
+          [(ngModel)]="email"
+          name="email"
+          required
+          (focus)="hideErrorMessage()"
+        />
+        <span *ngIf="showError" class="error-message">Please fill in all required fields correctly.</span>
+      </div>
+      <button type="submit" class="submit-button">
+        <span
+          class="newsletter-text"
+          style="font-size: 18px; font-weight: bold; cursor: pointer; color: #ffffff; background-color: black;"
+        >
+          Subscribe to Newsletter
+        </span>
+      </button>
+    </form>         
+  </div>
+</div>
+
+  <div class="footer__content">
+      <div>&nbsp;</div>
+      <div class="footer__content--infor">
+          <div class="footer__content--tem">
+              <div class="contact">
+                  <img src="assets/images/Logo_footer.png" style="width: 200px; margin-top: 30px;">
+                  <br>
+                  <br>
+                  <p class="spaced-text" style="font-weight: bold;">Our innate desire to connect with nature. It’s in our DNA.</p>
+                  
+                  <p class="spaced-text"><span>Location: </span>633 Nguyen Dinh Chieu, P.2, Q.3. HCM</p>
+                  <p><span>Email: </span>clayco&#64;gmail.com</p>
+                  <img src="assets/images/ncsc.png" style="width: 60px;">
+                  &nbsp;
+                  <img src="assets/images/bocongthuong.jpeg" style="width: 85px;">
+                  &nbsp;
+                  <img src="assets/images/dmca.png" style="width: 60px;">
+                  &nbsp;
+              </div>
+          </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="footer__content--infor">
+        <div class="footer__content--nav">
+            <div class="list-link">
+              <p class="footer__content--title bold">EXPLORE</p>
+              <a [routerLink]="['/app-infor']" fragment="FAQs">FAQs</a>
+              <a [routerLink]="['/app-infor']" fragment="shipping">Shipping and Handling</a>
+              <a [routerLink]="['/app-infor']" fragment="guarantee">30-Day Guarantee</a>
+              <a [routerLink]="['/app-infor']" fragment="privacy">Privacy Policy</a>
+              <a [routerLink]="['/app-infor']" fragment="termuse">Terms of Use</a>
+              <a [routerLink]="['/app-infor']" fragment="access">Accessibility Statement</a>
+            </div>
+          </div>
+          
+      </div>
+      <div>&nbsp;</div>
+      
+      <div>&nbsp;</div>
+      <div class="footer__content--logo">
+          <div>
+              <div class="hotline">
+                  <p class="footer__content--title" class="bold">CONTACT CLAYCO</p>
+                  <div class="hotline-img">
+                      <a href="https://www.facebook.com/profile.php?id=61568111493688" target="_blank"><img
+                              src="assets/images/fbicon.png"></a>
+                      &nbsp;
+                      <a href="" target="_blank"><img
+                              src="assets/images/Instaicon.png"></a>
+                      &nbsp;
+                      <a href="" target="_blank"><img
+                              src="assets/images/tiktokicon.png"></a>
+                      &nbsp;
+                      <a href="mailto:clayco.brand@gmail.com" target="_blank"><img
+                              src="assets/images/Gmailicon.png"></a>
+                      &nbsp;
+                  </div>
+                  <p class="bold">Hotline: 19001052</p>
+              </div>
+              <div class="logo-payment">
+                  <a href="app-payment-banking"><img src="assets/images/napas.png" style="width: 50px;"></a>
+                  &nbsp;
+                  <a href="app-payment-momo"><img src="assets/images/momo.jpeg" style="width: 20px;"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+</div>

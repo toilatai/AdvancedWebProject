@@ -1,0 +1,17 @@
+<h2 style="color: #8AA3A0;">We have found <b>{{resultCount}} </b> Product </h2>
+<div class="danhmucproduct">
+  <div class="product" *ngFor="let product of products">
+    <div class="product-item">
+      <div (click)="viewProductDetail(product)">
+        <div class="product-item--img">
+          <img src="{{ product.Image }}" style="width: 180px;">
+        </div>
+        <p class="product-item--info">{{ product.Name }}</p>
+        <p class="product-item--price">{{ product.Price }} $/p>
+      </div>
+      <button class="product-item--add" (click)="addToCart(product)">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

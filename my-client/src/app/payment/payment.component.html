@@ -1,0 +1,178 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+<div class="main-payment-banking">
+  <div class="main-info">
+    <div class="left">
+      <div class="cart">
+        <div class="cart__top">
+          <h2 class="cart__top-header">
+            Cart ({{ quantityItem }})
+          </h2>
+        </div>
+        <!--cart-->
+        <div class="cart__main">
+          <div class="cart__main-row">
+            <p class="cart__main-row--product">
+              Product
+            </p>
+            <p class="cart__main-row--price">
+              Subtotal
+            </p>
+            <p class="cart__main-row--quantity">
+              Quantity
+            </p>
+            <p class="cart__main-row--sum">
+              Total price
+            </p>
+          </div>
+
+          <div class="cart__main-row" *ngFor="let item of selectedItems">
+            <div class="cart__main-row--product">
+              <div class="cart__main-row--product-img" style="width:70px; height: 70px">
+                <img src="{{ item.Image }}" alt="">
+              </div>
+              <p class="cart__main-row--product-info"> {{ item.Name }}</p>
+            </div>
+            <p class="cart__main-row--price">{{ item.Price }} $</p>
+            <p class="cart__main-row--quantity">{{ item.quantity }}</p>
+            <p class="cart__main-row--sum">{{ findSum(item) }} $</p>
+          </div>
+        </div>
+        <div class="cart__top-button" style="border: none; outline: none; color: white; background-color: transparent;">
+          <button (click)="returnCart()">Edit cart</button>
+        </div>
+      </div>
+      <!--Delivery information-->
+      <div class="information">
+        <div class="information__heading">Delivery information</div>
+        <form class="information__detail">
+          <div class="form__information-row">
+            <label for="" class="form__information-label">Customer's name:</label>
+            <div class="form__information-input">
+              <span>{{ currentUser.Name }}</span>
+            </div>
+          </div>
+          <div class="form__information-row">
+            <label for="" class="form__information-label">Phone number:</label>
+            <div class="form__information-input">
+              <span>{{ currentUser.phonenumber }}</span>
+            </div>
+          </div>
+          <div class="form__information-row">
+            <label for="" class="form__information-label">Email:</label>
+            <div class="form__information-input">
+              <span>{{ currentUser.Mail }}</span>
+            </div>
+          </div>
+          <div class="form__information-row">
+            <label for="" class="form__information-label">Home address:</label>
+            <div class="form__information-input">
+              <span>{{ currentUser.Address }}</span>
+            </div>
+          </div>
+          <div class="form__information-row">
+            <label for="" class="form__information-label">Note</label>
+            <div class="form__information-input">
+              <textarea name="" id="" cols="30" rows="3" placeholder="Write your note..."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--Payment method-->
+      <div class="information">
+        <div class="information__heading">Payment method</div>
+        <label class="information__row" for="COD" (click)="checkCOD()">
+          <input type="radio" class="information__row-input" name="check" value="COD" [(ngModel)]="isChecked_COD"
+            id="COD">
+          <span class="information__row-info">Cash on Delivery</span>
+        </label>
+        <label class="information__row" (click)="checkBanking()" for="banking">
+          <input type="radio" class="information__row-input" name="check" value="Banking"
+            [(ngModel)]="isChecked_Banking" id="banking">
+          <span class="information__row-info">Payment via Internet Banking</span>
+        </label>
+        <label class="information__row" for="momo" (click)="checkMoMo()">
+          <input type="radio" class="information__row-input" name="check" value="MoMo" [(ngModel)]="isChecked_MoMo"
+            id="momo">
+          <span class="information__row-info">Payment via MoMo e-wallet</span>
+        </label>
+      </div>
+    </div>
+    <!--Order summary-->
+    <div class="order">
+      <div class="order__heading">
+        <span class="material-icons-outlined">shopping_bag</span>
+        <span class="title-bag">Order Summary</span>
+      </div>
+      <div class="order__row">
+        <p class="order__row-left">
+          Total Price of Items
+        </p>
+        <p class="order__row-right">
+          {{ totalPrice.toLocaleString("vi-VN", { minimumFractionDigits: 0 }) }} $
+        </p>
+      </div>
+      <div class="order__row">
+        <p class="order__row-left">
+          Discount
+        </p>
+        <p class="order__row-right">
+          {{ discountPrice.toLocaleString("vi-VN", { minimumFractionDigits: 0 }) }} $
+        </p>
+      </div>
+      <div class="order__row">
+        <p class="order__row-left">
+          Subtotal
+        </p>
+        <p class="order__row-right">
+          {{ prePrice.toLocaleString("vi-VN", { minimumFractionDigits: 0 }) }} $
+        </p>
+      </div>
+      <div class="order__row">
+        <p class="order__row-left">
+          Shipping
+        </p>
+        <p class="order__row-right">
+          {{ deliveryFee.toLocaleString("vi-VN", { minimumFractionDigits: 0 }) }} $
+        </p>
+      </div>
+      <div class=" order__row-discount">
+        <span class="material-icons-outlined">
+          local_offer
+        </span>
+        <input type="text" placeholder="Enter discount code" [(ngModel)]="discountCode" (input)="applyDiscountCode()">
+      </div>
+      <div class="order__row">
+        <p class="order__row-left" bold style="color:black; font-weight:bold">
+          Total price
+        </p>
+        <p class="order__row-right">
+          {{ price.toLocaleString("vi-VN", { minimumFractionDigits: 0 }) }} $
+        </p>
+      </div>
+      <div class="order__row">
+        <input id="agree" type="checkbox" [(ngModel)]="isChecked_Confirm">
+        <span><label for="agree">Agree to ClayCo's policies to complete the order.</label></span>
+      </div>
+      <div class="order__row-button">
+        <button (click)="onComplete()">Finish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- popup -->
+<div class="popup" *ngIf="isDonePayment">
+  <div class="popup-container">
+    <h2 class="popup-title">Order placed successfully.</h2>
+    <hr>
+    <p class="popup-message"><span class="main-color">Order placed successfully.</span>
+      <br>Please keep track of your order!
+    </p>
+    <div class="popup-buttons">
+      <button class="popup-button" (click)="viewDetail()">View detail</button>
+      <button class="popup-button" (click)="goHome()">Go back</button>
+    </div>
+  </div>
+</div>

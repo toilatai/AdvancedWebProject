@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.wrapper {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.category-navigation {
+    width: 10%;
+    background-color: #8AA3A0;;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.category-navigation strong {
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center !important;
+}
+
+.category-navigation .checklist.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-navigation .checklist.categories li {
+    margin-bottom: 8px;
+}
+
+.category-navigation .checklist.categories a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.category-navigation a:hover {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category-navigation .checklist.categories a:hover {
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Adjust styles for the product section */
+.product-section {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.danhmucproduct {
+    font: 1000 38px/50px;
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    color: #8AA3A0;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+}
+
+@media (max-width: 1300px) {
+    .danhmucproduct {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1080px) {
+    .danhmucproduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .danhmucproduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .danhmucproduct {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -5px;
+}
+
+.product button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.product-item {
+    box-sizing: border-box;
+    border: 1px solid #8AA3A0 ;
+    border-radius: 12px;
+    padding: 10px 0px;
+    width: calc(10%);
+    margin: 5px 15px;
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth scaling and shadow */
+}
+
+.product-item:hover {
+    border: 1px solid #8AA3A0;
+    transform: scale(1.05); /* Slightly enlarge the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    cursor: pointer;
+}
+
+.product-item--img img {
+    width: 250px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.product-item--info {
+    font-size: 14px;
+    margin: 6px 0;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:black
+}
+
+.product-item--price {
+    font-weight: bold;
+    color: black;
+    margin: 0 0 8px 0;
+}
+
+.product-item--add {
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    height: 30px;
+    font-size: 13px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling */
+}
+
+.product-item--add:hover {
+    transform: scale(1.1); /* Enlarges the button slightly on hover */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically if applied to a larger container */
+    height: 400px; /* Full viewport height if needed to center vertically */
+  }
+  
+  .custom-button {
+    background-color: black; /* Button background color */
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    padding: 12px 24px; /* Button padding */
+    border: none; /* Removes default border */
+    border-radius: 20px; /* Rounds the button corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  .custom-button:hover {
+    transform: scale(1.1); /* Increases the button size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+  }
+  

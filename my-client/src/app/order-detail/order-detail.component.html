@@ -1,0 +1,93 @@
+<div class="container">
+  <p class="title">Order Details</p>
+  <div class="content">
+    <div class="content__order">
+      <p>
+        Order {{order.OrderID}} <span class="completed"> {{order.Status}} </span>
+      </p>
+      <div class="content__order--infor">
+        <p>Delivery and payment information</p>
+        <div class="order__form--row">
+          <div class="form__row">
+            <label class="form__label" for="orderID">Order ID:</label>
+            <label class="form__content" for="orderID">
+              {{order.OrderID}}
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="name_order">Recipient's name:</label>
+            <label class="form__content" for="name_order">{{order.CustomerName}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="phone_order">Recipient's phone:</label>
+            <label class="form__content" for="phone_order">{{order.Phone}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="address_receive">Recipient's email:</label>
+            <label class="form__content" for="address_receive">{{order.Email}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="address_receive">Recipient's shipping address:</label>
+            <label class="form__content" for="address_receive">{{order.Address}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="payment_method">Payment method:</label>
+            <label class="form__content" for="payment_method">{{order.PaymentMethod}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="time_order">Order Date:</label>
+            <label class="form__content" for="time_order">{{order.OrderDate}}</label>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="time_receive">Estimated delivery date:</label>
+            <label class="form__content" for="time_receive">{{order.ShipDate}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="order_table">
+      <thead class="table_title">
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total price</th>
+      </thead>
+      <tbody class="table_content">
+        <tr class="table_data" *ngFor="let prod of order.OrderProduct">
+          <td class="image"><img src="{{prod.Image}}">
+          <td>{{prod.Name}}</td>
+          <td>{{prod.quantity}}</td>
+          <td>{{prod.Price}} USD</td>
+          <td>{{findSum(prod)}} USD</td>
+        </tr>
+        <tr>
+          <td>
+            {{order.PrePrice.toLocaleString("vi-VN", {minimumFractionDigits: 0})}} USD
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="text-end">Shipping fee</td>
+          <td>
+            {{order.DeliveryFee.toLocaleString("vi-VN", {minimumFractionDigits: 0})}} USD
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="text-end">Discount</td>
+          <td>
+            {{order.DiscountPrice.toLocaleString("vi-VN", {minimumFractionDigits: 0})}} USD
+          </td>
+        </tr>
+        <tr class="table_data table-lg">
+          <td colspan="4" class="total text-end">Total: </td>
+          <td class="total" style="font-weight: bold; color: #8AA3A0; font-size:15pt">
+            {{order.TotalPrice.toLocaleString("vi-VN", {minimumFractionDigits: 0})}} USD
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="button_continue">
+    <button (click)="gotoHome()">Continue shopping</button>
+  </div>
+</div>

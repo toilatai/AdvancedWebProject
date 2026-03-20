@@ -1,0 +1,73 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<div class="container">
+    <div class="container">
+        <div class="content">
+            <div class="content__item">
+                <div class="item__img">
+                    <div class="item__img--main">
+                        <img src="{{product.Image}}">
+                    </div>
+                </div>
+                <div class="item__infor">
+                    <p class="item__infor--title">{{product.Name}}</p>
+                    <hr>
+                    <h3 class="item__infor--price">{{product.Price}} $</h3>
+                    <p> <b> Origin:</b>{{product.Origin}}</p>
+                    <p> <b> Product Description: </b> </p>
+                    <p>{{product.Description}}</p>
+                    <p><b> Storage instruction: </b></p>
+                    <p>{{product.Store}}</p>
+                    <div class="amount">
+                        <p style="display: inline-block;">
+                            <b>Quantity</b>
+                        </p>
+                        <div class="item--amount">
+                            <button (click)="decrease()" id="clickdecrease"><span
+                                    class="material-symbols-outlined">remove</span></button>
+                            <input type="text" name="quantity" [(ngModel)]="quantity">
+                            <button (click)="increase()" id="clickincrease"><span
+                                    class="material-symbols-outlined">add</span></button>
+                        </div>
+                    </div>
+                    <hr style="height: auto; margin-bottom: 20px;">
+                    <div class="item--button">
+                        <button class="add--cart" (click)="addToCart(product)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-weight: bold; font-size: 30px; color: BLACK; text-align: center;">You might also like</p>
+        <div class="danhmucproduct">
+            <div class="product" *ngFor="let same_product of products.slice(0,5)">
+                <div class="product-item">
+                    <div (click)="viewProductDetail(same_product)">
+                        <div class="product-item--img">
+                            <img src="{{ same_product.Image }}" style="width: 180px;">
+                        </div>
+                        <p class="product-item--info">{{ same_product.Name }}</p>
+                        <p class="product-item--price" style="    font-size: 32px;">{{ same_product.Price }} $</p>
+                    </div>
+                    <button class="product-item--add" (click)="addToCartSame(same_product)">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+
+<!-- popup  -->
+<div class="popup" *ngIf="isLogin">
+    <div class="popup-container">
+        <h2 class="popup-title">Order</h2>
+        <hr>
+        <p class="popup-message">Please <span class="main-color">login</span> to continue ordering!
+        </p>
+        <div class="popup-buttons">
+            <button class="popup-button" (click)="onLogin()">Log in</button>
+            <button class="popup-button" (click)="onBack()">Go back</button>
+        </div>
+    </div>
+</div>
