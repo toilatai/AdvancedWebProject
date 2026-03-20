@@ -1,0 +1,123 @@
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100 outer-background">
+    <div class="signup-container p-4">
+        <h4 class="mb-3 text-center">Đăng ký nhanh để bắt đầu mua sắm</h4>
+
+        <div class="social-buttons d-flex flex-column align-items-center">
+            <button
+                class="btn btn-outline-secondary d-flex align-items-center justify-content-center mb-3 rounded-pill social-button">
+                <img src="assets/fb.png" alt="Facebook" class="me-2" width="20" height="20"> Tiếp tục với Facebook
+            </button>
+            <button
+                class="btn btn-outline-secondary d-flex align-items-center justify-content-center mb-3 rounded-pill social-button">
+                <img src="assets/google.png" alt="Google" class="me-2" width="20" height="20"> Tiếp tục với Google
+            </button>
+            <button
+                class="btn btn-outline-secondary d-flex align-items-center justify-content-center rounded-pill social-button">
+                <img src="assets/apple.png" alt="Apple" class="me-2" width="20" height="20"> Tiếp tục với Apple
+            </button>
+        </div>
+
+        <div class="separator my-4 text-center" id="forms">HOẶC</div>
+        <h6 class="p-4 text-center">Đăng ký bằng tài khoản email của bạn</h6>
+
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="text-start form-content mx-auto">
+            <div class="mb-4">
+                <label for="profile-name" class="form-label">Tên hồ sơ</label>
+                <input type="text" id="profile-name" formControlName="profileName" class="form-control"
+                    placeholder="Nhập tên hồ sơ của bạn" required>
+                <div *ngIf="signupForm.get('profileName')?.invalid && signupForm.get('profileName')?.touched"
+                    class="text-danger">Tên hồ sơ là bắt buộc.</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control"
+                    placeholder="Nhập địa chỉ email của bạn" required>
+                <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="text-danger">
+                    Email không hợp lệ.</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" id="password" formControlName="password" class="form-control"
+                    placeholder="Nhập mật khẩu của bạn" required>
+                <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+                    class="text-danger">Mật khẩu phải có ít nhất 8 ký tự.</div>
+                <small class="text-muted">
+                    Sử dụng 8 ký tự trở lên, bao gồm kết hợp chữ cái, chữ hoa, số và ký hiệu.
+                </small>
+            </div>
+
+            <div class="mb-4">
+                <label for="confirm-password" class="form-label">Xác nhận mật khẩu</label>
+                <input type="password" id="confirm-password" formControlName="confirmPassword" class="form-control"
+                    placeholder="Nhập lại mật khẩu của bạn" required>
+                <div *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPassword')?.touched"
+                    class="text-danger">Mật khẩu xác nhận không khớp.</div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Giới tính của bạn? (tùy chọn)</label>
+                <div class="d-flex gap-3">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" formControlName="gender"
+                            value="female" id="female">
+                        <label for="female" class="form-check-label">Nữ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="male"
+                            id="male">
+                        <label for="male" class="form-check-label">Nam</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" formControlName="gender"
+                            value="non-binary" id="non-binary">
+                        <label for="non-binary" class="form-check-label">Không xác định</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Ngày sinh của bạn là?</label>
+                <div class="d-flex gap-3">
+                    <select class="form-select" formControlName="birthDay" aria-label="Ngày sinh" required>
+                        <option value="">Ngày</option>
+                        <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+                    </select>
+                    <select class="form-select" formControlName="birthMonth" aria-label="Tháng sinh" required>
+                        <option value="">Tháng</option>
+                        <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+                    </select>
+                    <select class="form-select" formControlName="birthYear" aria-label="Năm sinh" required>
+                        <option value="">Năm</option>
+                        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" formControlName="marketing" id="marketing">
+                <label for="marketing" class="form-check-label">Chia sẻ dữ liệu đăng ký của tôi với các nhà cung cấp nội
+                    dung cho mục đích tiếp thị.</label>
+            </div>
+
+            <p class="small">Bằng cách tạo tài khoản, bạn đồng ý với <a routerLink="/term">Điều khoản sử dụng</a> và <a
+                    routerLink="/privacy">Chính sách bảo mật</a>.</p>
+
+            <div class="recaptcha-box mb-4 d-flex align-items-center justify-content-between p-2">
+                <div class="d-flex align-items-center">
+                    <input type="checkbox" class="form-check-input me-2" formControlName="notRobot" required>
+                    <label>Tôi không phải là người máy</label>
+                </div>
+                <img src="assets/recaptcha.png" alt="reCAPTCHA logo" width="60">
+            </div>
+
+            <div class="container-button">
+                <button type="submit" class="btn btn-primary w-100 mb-4 signup-button"
+                    [disabled]="signupForm.invalid">Đăng ký</button>
+            </div>
+
+            <p class="small text-center">Đã có tài khoản? <a routerLink="/login" class="no-underline">Đăng nhập</a></p>
+        </form>
+    </div>
+</div>

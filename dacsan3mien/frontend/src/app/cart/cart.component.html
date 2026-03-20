@@ -1,0 +1,98 @@
+<div class="container my-5 cart-page">
+    <h2 class="mb-4">TRANG CHỦ / GIỎ HÀNG</h2>
+    <div class="row">
+        <div class="col-lg-8">
+            <div *ngFor="let item of cartItems"
+                class="cart-item d-flex align-items-center mb-3 p-3 rounded shadow-sm bg-light">
+                <input type="checkbox" class="form-check-input me-2" [(ngModel)]="item.isSelected"
+                    (ngModelChange)="onItemSelectChange()" />
+
+                <img [src]="item.image_1 || 'assets/default-image.png'" alt="{{ item.product_name || 'Sản phẩm' }}"
+                    class="cart-item-image me-3" />
+
+                <div class="cart-item-details flex-grow-1">
+                    <h5 class="product-name">{{ item.product_name || 'Queentin' }}</h5>
+                    <p class="product-price">{{ item.unit_price | currency: 'VND' }}</p>
+                    <p class="product-status">
+                        {{ item.stocked_quantity && item.stocked_quantity > 0 ? 'Còn hàng' : 'Hết hàng' }}
+                    </p>
+
+                    <div class="d-flex align-items-center mt-2">
+                        <div class="quantity-selector">
+                            <button (click)="decreaseQuantity(item)" [disabled]="item.tempQuantity <= 1"
+                                class="btn btn-outline-secondary btn-sm">
+                                -
+                            </button>
+
+                            <input type="number" [(ngModel)]="item.tempQuantity"
+                                class="form-control form-control-sm text-center mx-1 quantity-input"
+                                (change)="updateTempQuantity(item.productId, item.tempQuantity)" min="1"
+                                [max]="item.stocked_quantity" />
+
+                            <button (click)="increaseQuantity(item)"
+                                [disabled]="item.tempQuantity >= item.stocked_quantity"
+                                class="btn btn-outline-secondary btn-sm">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-actions mt-2">
+                        <button (click)="saveChanges(item.productId)"
+                            class="btn btn-link text-decoration-none text-primary me-2">
+                            Lưu
+                        </button>
+                        <button (click)="confirmRemoveFromCart(item.productId)"
+                            class="btn btn-link text-decoration-none text-danger">
+                            Xóa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cart-item-total text-end">
+                    <h5 class="total-price">
+                        {{ (item.unit_price * item.tempQuantity) | currency: 'VND' }}
+                    </h5>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-3">
+                <button class="btn custom-button" routerLink="/">Quay lại cửa hàng</button>
+                <button class="btn custom-button" (click)="toggleSelectAll()">Chọn tất cả</button>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="cart-summary p-4 rounded shadow-sm mb-3 bg-white">
+                <h4>Tổng Giỏ Hàng</h4>
+
+                <div class="d-flex justify-content-between">
+                    <span>Tổng tiền hàng:</span>
+                    <span>{{ totalSelectedPrice | currency: 'VND' }}</span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span>Phí vận chuyển:</span>
+                    <span>Miễn phí</span>
+                </div>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <span>Thành tiền:</span>
+                    <span>{{ totalSelectedPrice | currency: 'VND' }}</span>
+                </div>
+
+                <button (click)="proceedToCheckout()" class="btn btn-primary w-100 mt-4 rounded-pill">
+                    Thanh toán
+                </button>
+            </div>
+
+            <div class="coupon-box p-4 rounded shadow-sm bg-white">
+                <h5 class="mb-3">Mã ưu đãi</h5>
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-start" placeholder="Nhập mã ưu đãi" />
+                    <button class="btn btn-primary rounded-end">Áp dụng mã</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

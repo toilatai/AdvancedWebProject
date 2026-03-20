@@ -1,0 +1,52 @@
+<body class="background">
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="login-container">
+      <h2>ĐĂNG NHẬP</h2>
+      <p>Đăng nhập nâng cao trải nghiệm mua sắm cùng với <b>Đặc sản 3 miền!</b></p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div *ngIf="loginError" class="alert alert-danger">{{ loginError }}</div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control rounded-pill" 
+                 formControlName="email" placeholder="Nhập tài khoản hoặc email của bạn" 
+                 required autocomplete="email">
+        </div>
+
+        <div class="mb-3">
+          <input type="password" class="form-control rounded-pill" 
+                 formControlName="password" placeholder="Nhập mật khẩu" 
+                 required autocomplete="current-password">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <label><input type="checkbox" formControlName="rememberMe"> Ghi nhớ đăng nhập</label>
+          <a href="#" class="no-underline">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="btn-dark w-50 mb-3">Đăng nhập</button>
+      </form>
+
+      <p>Chưa có tài khoản? 
+        <a routerLink="/signup" fragment="forms" class="no-underline">Đăng ký ngay</a>
+      </p>
+
+      <div class="separator">Hoặc</div>
+
+      <div class="social-buttons">
+        <button class="w-100 mb-2 d-flex align-items-center justify-content-center">
+          <img src="assets/fb.png" alt="Facebook" class="me-2" width="20" height="20">
+          Tiếp tục với Facebook
+        </button>
+        <button class="w-100 mb-2 d-flex align-items-center justify-content-center">
+          <img src="assets/google.png" alt="Google" class="me-2" width="20" height="20">
+          Tiếp tục với Google
+        </button>
+        <button class="w-100 d-flex align-items-center justify-content-center">
+          <img src="assets/apple.png" alt="Apple" class="me-2" width="20" height="20">
+          Tiếp tục với Apple
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

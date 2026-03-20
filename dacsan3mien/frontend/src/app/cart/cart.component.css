@@ -1,0 +1,156 @@
+.cart-page {
+    background: #EEEBDD; 
+    color: #1B1717; 
+    padding: 1rem;
+}
+
+.cart-page h2 {
+    font-weight: 700;
+    color: #810000; 
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem;
+    border: 1px solid #63000033; 
+    background: #fffaf0; 
+    border-radius: 8px;
+}
+
+.cart-item + .cart-item {
+    margin-top: 0.75rem;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    border: 1px solid #63000022;
+    background: #f8f9fa;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1B1717;
+}
+
+.product-price,
+.product-status {
+    font-size: 0.95rem;
+    color: #1B1717;
+}
+
+.product-status {
+    color: #630000;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-selector .quantity-input {
+    width: 56px;
+    height: 34px;
+    text-align: center;
+    font-size: 0.95rem;
+    border: 1px solid #63000033;
+    border-radius: 6px;
+    background: #fff;
+    color: #1B1717;
+}
+
+.cart-actions button {
+    font-size: 0.95rem;
+}
+
+.cart-item-total h5,
+.total-price {
+    color: #810000;
+    font-weight: 800;
+}
+
+.cart-summary,
+.coupon-box {
+    border: 1px solid #63000022;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fffaf0;
+}
+
+.input-group .form-control {
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #63000033;
+}
+
+.input-group .btn {
+    border-radius: 0 50px 50px 0;
+    background-color: #810000;
+    color: #EEEBDD;
+    font-size: 0.95rem;
+}
+
+button.btn-primary {
+    background-color: #810000;
+    border-radius: 50px;
+    color: #EEEBDD;
+    border: none;
+    padding: 0.6rem 1rem;
+}
+
+button.btn-primary:hover {
+    background-color: #630000;
+}
+
+button.btn-link {
+    padding: 0;
+    font-size: 0.9rem;
+    color: #810000;
+}
+
+button.btn-link:hover {
+    color: #630000;
+}
+
+.custom-button {
+    background-color: #810000;
+    color: #EEEBDD;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    width: auto;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.custom-button:hover {
+    background-color: #630000;
+}
+
+@media (max-width: 768px) {
+    .cart-item-image {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item-image {
+        width: 80px;
+        height: 80px;
+    }
+}

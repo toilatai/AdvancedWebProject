@@ -1,0 +1,314 @@
+[{
+  "_id": {
+    "$oid": "6728c0ae6192805738f87721"
+  },
+  "profileName": "Nguyễn Quốc Huy",
+  "email": "huynq22406c@st.uel.edu.vn",
+  "password": "$2b$10$Z1Y/M8w3cOchzz.M2cVtDOw4YHI1rRIJEdAOfm99rdeo1zrXyjefm",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 6",
+    "day": "24",
+    "year": "2004"
+  },
+  "marketing": true,
+  "address": "KTX Khu B",
+  "phone": "0375001528",
+  "role": "admin",
+  "action": "edit all"
+},
+{
+  "_id": {
+    "$oid": "6728c1606192805738f87722"
+  },
+  "profileName": "Nguyễn Thùy Trang",
+  "email": "trangnt22406c@st.uel.edu.vn",
+  "password": "$2b$10$OU1NvvNCPf9BDeM/sDQt3.zSCQF0KJxkpdxDAswErjlNm1VKHuhXK",
+  "gender": "female",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "22",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user",
+  "address": ""
+},
+{
+  "_id": {
+    "$oid": "6728dafa5ceab83daafa1569"
+  },
+  "profileName": "Đào Đức Dương",
+  "email": "duongddk24416@st.uel.edu.vn",
+  "password": "$2b$10$Jp08Et6iAhhuhykRVlCgquMPa3GXqWdDnsSy9ikF1VFZHU26AviHu",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 8",
+    "day": "13",
+    "year": "2015"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "67292c72055532e5055eb1f3"
+  },
+  "profileName": "Nguyễn Trọng Trí",
+  "email": "trintk22406@st.uel.edu.vn",
+  "password": "$2b$10$KtyIriZo6pVQSVO3sbozEeRVsnmcOkcPi2pPRFi/Rk481zxSc3DNe",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 7",
+    "day": "31",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "6729b1da5f09ed34d4bdb6ef"
+  },
+  "profileName": "Võ Duy Thiện",
+  "email": "thienvd22411@st.uel.edu.vn",
+  "password": "$2b$10$Mf7b7a0042kAMD6zeNeGOuTMyoDVYmVZVYsb/BXeyI5rh/aigSyHi",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 3",
+    "day": "24",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "6729c44801d682db5faa7722"
+  },
+  "profileName": "Nguyễn Văn An",
+  "email": "annvk22406@st.uel.edu.vn",
+  "password": "$2b$10$Y9s.2PDfWdZ0C0iWU1VcBexbXQmip/nAtDkgQRd4UuqqHWzpZgBA.",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 8",
+    "day": "13",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "6729cf0f01d682db5faa7723"
+  },
+  "profileName": "Nguyễn Vũ Bảo",
+  "email": "baonvk22406@st.uel.edu.vn",
+  "password": "$2b$10$u9xkMPxo4GMXNzoF4XKciezey1TaD13Pkznh1D0UohjQSgrNTX/EK",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "12",
+    "year": "2014"
+  },
+  "marketing": false,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "672a01f13922811d5184654a"
+  },
+  "profileName": "Nguyễn Văn Cao",
+  "email": "caonvk22406@st.uel.edu.vn",
+  "password": "$2b$10$muTVJ6L9SODWREtae23wrOY4McvnxGVFUMN/7fLje43nv9kmnC5gK",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 12",
+    "day": "13",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "672accfae8dd58f56e03f76a"
+  },
+  "profileName": "Huỳnh Thị Thanh Trúc",
+  "email": "truchtt22411@st.uel.edu.vn",
+  "password": "$2b$10$OEXvdm0FGuACet8Igp7YLefytngGRu4X3QCTiIDEd7OBD8ywDLBxG",
+  "gender": "female",
+  "birthDate": {
+    "month": "Tháng 12",
+    "day": "15",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "672aedd5e397bdf738aab862"
+  },
+  "profileName": "Nguyễn Quốc Hữu",
+  "email": "huunq22411@st.uel.edu.vn",
+  "password": "$2b$10$b6/yFhYGZcL3BozMLmt8COZGLdOluGmkC8J4JHg1zP6hkJpL40wrq",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "17",
+    "year": "2010"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "673471713149701174ade570"
+  },
+  "profileName": "Nguyễn Anh Tuấn",
+  "email": "tuanna22406@st.uel.edu.vn",
+  "password": "$2b$10$UlAWeRcsB1gwYUg3oNGF4e7Z3oScpnwFQuc0VVOMw.hxl0QEFgLJ.",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 3",
+    "day": "26",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "673a193dbc8c75e17b912cd6"
+  },
+  "profileName": "Nguyễn Thế Lộc",
+  "email": "locnt22406c@st.uel.edu.vn",
+  "password": "$2b$10$oFNlsyfwuJp1FjrD/3zu3eZdF5pK6Ro/UQK8zKyL.sv2P0Xd7eAL2",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 10",
+    "day": "9",
+    "year": "2004"
+  },
+  "marketing": false,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "673d9b344034ae748745f745"
+  },
+  "profileName": "Võ Thị Kim Nhàn",
+  "email": "nhanvtk22406@st.uel.edu.vn",
+  "password": "$2b$10$HZSvK1yG5XkAJu9oeAPGJ.4goMXSEdy50RaZ8wMNubza.9IfkIc4W",
+  "gender": "female",
+  "birthDate": {
+    "month": "Tháng 1",
+    "day": "13",
+    "year": "2004"
+  },
+  "marketing": false,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "67444b323e6dfb46588a109c"
+  },
+  "profileName": "Nguyễn Hữu Thi",
+  "email": "thinh22406@st.uel.edu.vn",
+  "password": "$2b$10$1zn78qEubzh9wmCjNv1G/Oz3dMzT1RiEqF4nPbHaUpyFNujZoJFK6",
+  "gender": "male",
+  "birthDate": {
+    "month": "Tháng 12",
+    "day": "31",
+    "year": "2004"
+  },
+  "marketing": true,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "6748a2252baeb369ec435ac1"
+  },
+  "profileName": "ADMIN",
+  "email": "admin@uel.edu.vn",
+  "password": "$2b$10$RbMPj4FpPZk0qdE6nOiYM.z5xjuUhN7afFNtZk1f0HVUNW0eHPzcK",
+  "gender": "non-binary",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "29",
+    "year": "2024"
+  },
+  "marketing": false,
+  "role": "admin",
+  "action": "edit all",
+  "address": "KTX Khu B",
+  "phone": "0375001528"
+},
+{
+  "_id": {
+    "$oid": "674afe73bed2a43e66e370ac"
+  },
+  "profileName": "HR",
+  "email": "hr@uel.edu.vn",
+  "password": "$2b$10$cRJK1X50.ZiYc7Rn.lZtGeZokzvDqUMFNQy8.Ocz1M0u33aVQQI1K",
+  "gender": "non-binary",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "30",
+    "year": "2024"
+  },
+  "marketing": false,
+  "role": "admin",
+  "action": "account ctrl"
+},
+{
+  "_id": {
+    "$oid": "674afe9cbed2a43e66e370ad"
+  },
+  "profileName": "USER",
+  "email": "user@uel.edu.vn",
+  "password": "$2b$10$wtXaY8cA.1NkGa43mUyE.u7MWpQ6Krw8RlpBUEBrtmjU2tGM1bcHa",
+  "gender": "non-binary",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "30",
+    "year": "2024"
+  },
+  "marketing": false,
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "674afec4bed2a43e66e370ae"
+  },
+  "profileName": "SALES",
+  "email": "sales@uel.edu.vn",
+  "password": "$2b$10$M7x3I6kES0VI1AJRwSDZx.9Sp./FMpNiK30Kl3EnFcBMMuG0YFuo6",
+  "gender": "non-binary",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "30",
+    "year": "2024"
+  },
+  "marketing": false,
+  "role": "admin",
+  "action": "sales ctrl"
+},
+{
+  "_id": {
+    "$oid": "674aff35bed2a43e66e370af"
+  },
+  "profileName": "SECRETARY",
+  "email": "sec@uel.edu.vn",
+  "password": "$2b$10$bx6j1REnSXIWSNrmfaL6huRIEatrSEOEu3.hjbtjlzaCorE5EiS8K",
+  "gender": "non-binary",
+  "birthDate": {
+    "month": "Tháng 11",
+    "day": "30",
+    "year": "2024"
+  },
+  "marketing": false,
+  "role": "admin",
+  "action": "just view"
+}]

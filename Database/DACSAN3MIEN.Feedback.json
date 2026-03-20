@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "672aeecae397bdf738aab864"
+  },
+  "fullName": " ",
+  "email": null,
+  "phone": null,
+  "message": "Shop nhiệt tình",
+  "submittedAt": {
+    "$date": "2024-11-06T04:21:30.432Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "673a1ab9bc8c75e17b912cdc"
+  },
+  "fullName": " ",
+  "email": null,
+  "phone": null,
+  "message": "sản phẩm đẹp",
+  "submittedAt": {
+    "$date": "2024-11-17T16:32:57.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e0b33515d52a34555a616f"
+  },
+  "fullName": "Dương Minh",
+  "email": "duongtanminh2306@gmail.com",
+  "phone": "0792098518",
+  "message": "hay",
+  "submittedAt": {
+    "$date": "2025-10-04T05:40:05.091Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fe3f2010e89dfdef7fd5ec"
+  },
+  "fullName": "Dương Minh",
+  "email": "duongtanminh2306@gmail.com",
+  "phone": "0792098518",
+  "message": "Cho mình xin các thông tin cụ thể về hình thức B2B ạ",
+  "submittedAt": {
+    "$date": "2025-10-26T15:32:48.820Z"
+  },
+  "status": "replied",
+  "updatedAt": {
+    "$date": "2025-11-10T10:58:11.948Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905dac48b69f37f56ffb2a2"
+  },
+  "fullName": "Nguyễn Thế Thông",
+  "email": "thongthe@gmail.com",
+  "phone": "0987535242",
+  "message": "Đồ ăn ngon, web thân thiện",
+  "status": "read",
+  "submittedAt": {
+    "$date": "2025-11-01T10:02:44.221Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T10:03:13.095Z"
+  }
+}]
