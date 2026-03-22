@@ -446,7 +446,7 @@ button {
   margin-bottom: 20px ;
   border-radius: 30px;;
 
-  background: url(../../assets/images/xmasdish.jpg) no-repeat center;
+  background: url(../../assets/images/theme1.jpg) no-repeat center;
   background-size: cover;
   z-index: 20;
 }
@@ -970,7 +970,7 @@ button {
   left: 13px;
   color: BLACK;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 43.884px;
   text-align: LEFT;
@@ -1257,26 +1257,26 @@ button {
   align-items: center;
   justify-content: flex-start;
   position: absolute;
-  width: 800px;
-  height: 88px;
-  top: 31px;
+  width: 760px;
+  height: 96px;
+  top: 24px;
   left: 608px;
   color: BLACK;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 36px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 43.884px;
   text-align: left;
   text-overflow: initial;
   z-index: 74;
-  overflow: hidden;
+  overflow: visible;
 }
 .rectangle-25 {
   position: absolute;
-  width: 440px;
-  height: 9px;
-  top: 71px;
-  left: 998px;
+  width: 240px;
+  height: 6px;
+  top: 112px;
+  left: 1110px;
   background:BLACK;
   z-index: 84;
 }
@@ -1530,7 +1530,7 @@ button {
   width: 1443px;
   height: 613px;
   margin: 75px 0 30px 0;
-  background: url(../../assets/images/winter.png)
+  background: url(../../assets/images/theme1.jpg)
     no-repeat center;
   background-size: cover;
   z-index: 95;
@@ -1567,12 +1567,12 @@ button {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  width: 557px;
-  height: 88px;
+  width: 620px;
+  height: auto;
   margin: 18px 0 0 67px;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 43.884px;
   text-align: left;
@@ -1581,15 +1581,15 @@ button {
 .register-now-save-big {
   display: block;
   position: relative;
-  height: 46px;
+  height: auto;
   margin: 6px 0 0 67px;
   color: #58b7ad;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 46px;
+  line-height: 34px;
   text-align: left;
-  white-space: nowrap;
+  white-space: normal;
   z-index: 100;
 }
 .off-50-percent {
@@ -1615,14 +1615,14 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 1000px;
-  height: 108px;
-  margin: 30px 0 0 250px;
+  width: 900px;
+  height: auto;
+  margin: 30px 0 0 280px;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 44px;
+  font-size: 54px;
   font-weight: 600;
-  line-height: 53.636px;
+  line-height: 1.2;
   text-align: center;
   z-index: 101;
 }
@@ -1688,7 +1688,7 @@ button {
   height: 478.742px;
   top: 53px;
   left: 850px;
-  background: url(../../assets/images/ws.png) no-repeat center;
+  background: url(../../assets/images/theme12.webp) no-repeat center;
   background-size: cover;
   z-index: 106;
   border-radius: 30px;
