@@ -5,12 +5,8 @@ const cookieParser = require('cookie-parser');
 const morgan = require("morgan");
 app.use(morgan("combined"));
 
-const bodyParser = require("body-parser")
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
-
 app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 
 const cors = require("cors");
@@ -79,7 +75,7 @@ app.put("/products", cors(), async (req, res) => {
         Description: req.body.Description,
         Origin: req.body.Origin,
         Uses: req.body.Uses,
-        Customizable: req.body.Customazable,
+        Customizable: req.body.Customizable,
         Store: req.body.Store,
         Category: req.body.Category,
         Quantity: req.body.Quantity
@@ -169,8 +165,7 @@ app.delete("/categories/:id", cors(), async (req, res) => {
 
 //Thông tin của Giỏ hàng
 const session = require('express-session');
-const { hasSubscribers } = require('diagnostics_channel');
-app.use(session({ secret: "Shh, its a secret!" }));
+app.use(session({ secret: "Shh, its a secret!", resave: false, saveUninitialized: false }));
 app.get("/contact", cors(), (req, res) => {
   if (req.session.visited != null) {
     req.session.visited++
@@ -290,25 +285,6 @@ app.put("/customers", cors(), async (req, res) => {
   res.send(result[0])
 });
 
-app.put("/customers", cors(), async (req, res) => {
-  await customerCollection.updateOne(
-    { _id: new ObjectId(req.body._id) }, //condition for update
-    {
-      $set: {
-        //Field for updating
-        CustomerName: req.body.CustomerName,
-        Phone: req.body.Phone,
-        Mail: req.body.Mail,
-        BOD: req.body.BOD,
-        Gender: req.body.Gender,
-      },
-    }
-  )
-  var o_id = req.params._id;
-  const result = await customerCollection.find({ _id: o_id }).toArray();
-  res.send(result[0])
-});
-
 
 app.get("/delivery", cors(), async (req, res) => {
   const result = await deliveryCustomerCollection.find({}).toArray();
@@ -336,7 +312,7 @@ app.put("/delivery", cors(), async (req, res) => {
       },
     }
   )
-  var o_id = req.params._id;
+  var o_id = new ObjectId(req.body._id);
   const result = await deliveryCustomerCollection.find({ _id: o_id }).toArray();
   res.send(result[0])
 })
@@ -431,7 +407,6 @@ app.put("/orderConfirm/:id", cors(), async (req, res) => {
     }
   );
   //send Order after updating
-  var o_id = new ObjectId(req.body._id);
   const result = await orderCollection.find({ _id: o_id }).toArray();
   res.send(result[0]);
 });
@@ -456,12 +431,4 @@ app.get("/orders/customer/:name", cors(), async (req, res) => {
   const customerName = req.params["name"];
   const result = await orderCollection.find({ CustomerName: customerName }).toArray();
   res.send(result);
-});
-
-app.get('/search', cors(), async (req, res) => {
-  const keyword = req.query.keyword;
-  const productsCollection = database.collection('ProductsData');
-  const query = { Name: { $regex: keyword, $options: 'i' } };
-  const products= await productsCollection.find(query).toArray();
-  res.send(products);
 });
