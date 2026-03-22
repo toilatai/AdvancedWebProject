@@ -6,7 +6,9 @@
     <div>
       <nav class="header__menu">
         <div class="menubar">
-          <a routerLink=""><img src="assets/images/Logo.png"></a>
+          <a routerLink="" class="brand-mark" aria-label="ClayStudio">
+            <img src="assets/images/Logo.png" class="brand-logo-header" alt="ClayStudio logo">
+          </a>
           <ul>
             <li id="home"><a routerLink="">Home</a></li>
             <li id="product"><a routerLink="/app-category">Products</a></li>
@@ -29,8 +31,8 @@
             </li>
             <a [routerLink]="['/app-cart']"><span class="material-icons-outlined">shopping_bag</span></a>
             <li class="item"><button>{{quantityItem}}</button></li>
-            <a *ngIf="!isLoggedIn"><a [routerLink]="['/app-login']"><span
-                  class="material-icons-outlined">account_circle</span></a></a>
+            <a *ngIf="!isLoggedIn" [routerLink]="['/app-login']"><span
+              class="material-icons-outlined">account_circle</span></a>
             <!-- ĐĂNG NHẬP RỒI -->
             <li>
               <div class="dropdown--signIn">

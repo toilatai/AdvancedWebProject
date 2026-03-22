@@ -109,6 +109,13 @@
   line-height: 1.55;
 }
 
+.brand-logo-footer {
+  display: block;
+  margin: 0 0 12px;
+  width: clamp(160px, 18vw, 240px);
+  height: auto;
+}
+
 .spaced-text {
   line-height: 1.6;
 }

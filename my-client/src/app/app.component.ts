@@ -24,7 +24,7 @@ export class AppComponent {
   chatHistory: Array<{ sender: 'bot' | 'user'; text: string }> = [
     {
       sender: 'bot',
-      text: 'Hi! I am ClayCo assistant. Tap a quick question below and I will answer right away.',
+      text: 'Hi! I am ClayStudio assistant. Tap a quick question below and I will answer right away.',
     },
   ];
 

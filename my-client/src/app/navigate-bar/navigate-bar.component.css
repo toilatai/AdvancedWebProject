@@ -18,11 +18,17 @@
   gap: 16px;
 }
 
-.header__menu img {
-  width: 84px;
-  height: 84px;
-  object-fit: contain;
-  margin: 0;
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.brand-logo-header {
+  display: block;
+  width: clamp(120px, 12vw, 170px);
+  height: auto;
 }
 
 .header__menu ul {

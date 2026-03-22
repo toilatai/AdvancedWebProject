@@ -25,6 +25,15 @@
     height: auto;
 }
 
+.brand-mark {
+    display: inline-block;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    color: #0f1f1c;
+}
+
 .nav__content {
     list-style: none;
     margin: 0;

@@ -10,15 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    overflow: hidden;
+    position: relative;
     z-index: 2;
-    height: 65%;
-    width: 61%;
+    min-height: 100vh;
+    width: 100%;
+    padding: 24px;
 }
 
 .bold {
@@ -31,6 +27,10 @@
 
 .content {
     display: flex;
+    width: min(980px, 100%);
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .error-message {
@@ -46,15 +46,16 @@
     text-align: center;
     margin: auto;
     z-index: 1;
-    margin-left: 20px;
-    width: 480px;
-    height: 550px;
+    margin-left: 0;
+    width: 420px;
+    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .imgbg img {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -216,31 +217,48 @@ h3 {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 768px) {
-    .white-frame {
-        width: 90vw;
-        height: 80vh;
+@media only screen and (max-width: 992px) {
+    .frame {
+        padding: 16px;
     }
 
-    .imggt img {
-        width: 100%;
-        max-width: none;
-        margin-left: 0;
+    .content {
+        width: min(560px, 100%);
+    }
+
+    .imggt {
+        display: none;
     }
 
     .login_form {
-        width: 90%;
-        margin-right: 0;
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        min-height: 465px;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .white-frame {
-        width: 95vw;
-        height: 70vh;
+@media only screen and (max-width: 768px) {
+    .login_form {
+        padding: 36px 18px;
     }
 
-    .login_form {
-        width: 95%;
+    .input--content {
+        width: 100%;
+    }
+
+    .container,
+    .container__input,
+    .container__checkbox {
+        width: 100%;
+    }
+
+    .bold {
+        margin-left: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 22px;
     }
 }

@@ -15,7 +15,7 @@ export class AdminLoginComponent {
 
   onSubmit(): void {
     // Kiểm tra tài khoản và mật khẩu nhập vào có đúng hay không
-    if (this.username === 'ClayCo admin' && this.password === 'clayco369') {
+    if (this.username === 'ClayStudio admin' && this.password === 'claystudio369') {
       // Nếu đúng, chuyển hướng đến trang quản trị
       this.router.navigate(['admin-home']);
     } else {

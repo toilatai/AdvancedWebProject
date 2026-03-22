@@ -4,15 +4,15 @@ const { MongoClient } = require("mongodb");
 const { EJSON } = require("bson");
 
 const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017";
-const DB_NAME = process.env.DB_NAME || "ClayCoDatabase";
+const DB_NAME = process.env.DB_NAME || "ClayStudioDatabase";
 
 const fileToCollection = {
-  "ClayCoDatabase.ProductData.json": "ProductsData",
-  "ClayCoDatabase.CustomerData.json": "CustomerData",
-  "ClayCoDatabase.OrderData.json": "OrderData",
-  "ClayCoDatabase.CategoryData.json": "CategoryData",
-  "ClayCoDatabase.AccountCustomerData.json": "AccountCustomerData",
-  "ClayCoDatabase.DeliveryCustomerData.json": "DeliveryCustomerData",
+  "ClayStudioDatabase.ProductData.json": "ProductsData",
+  "ClayStudioDatabase.CustomerData.json": "CustomerData",
+  "ClayStudioDatabase.OrderData.json": "OrderData",
+  "ClayStudioDatabase.CategoryData.json": "CategoryData",
+  "ClayStudioDatabase.AccountCustomerData.json": "AccountCustomerData",
+  "ClayStudioDatabase.DeliveryCustomerData.json": "DeliveryCustomerData",
 };
 
 function sanitizeJsonText(text) {

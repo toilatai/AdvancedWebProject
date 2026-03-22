@@ -9,6 +9,27 @@
   z-index: 2000;
 }
 
+.facebook-bubble {
+  position: absolute;
+  right: 4px;
+  bottom: 78px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 14px 24px rgba(60, 89, 83, 0.24);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 2.3s ease-in-out infinite;
+}
+
+.facebook-bubble img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
 .chat-bubble {
   width: 66px;
   height: 66px;
@@ -20,6 +41,12 @@
   background: linear-gradient(135deg, var(--clay-primary), var(--clay-primary-deep));
   box-shadow: 0 16px 28px rgba(60, 89, 83, 0.28);
   animation: floatBubble 2.3s ease-in-out infinite;
+}
+
+.chat-bubble__icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 @keyframes floatBubble {

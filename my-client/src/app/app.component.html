@@ -3,13 +3,23 @@
 <app-footer *ngIf="!['/app-login', '/app-signup', '/app-forgot-password', '/app-signup-otp', '/app-reset-password', '/app-change-psw', '/app-payment-momo', '/app-payment-banking', '/app-sign-up-successfully'].includes(router.url)"></app-footer>
 
 <div class="floating-chat" *ngIf="!['/app-login', '/app-signup', '/app-forgot-password', '/app-signup-otp', '/app-reset-password', '/app-change-psw', '/app-payment-momo', '/app-payment-banking', '/app-sign-up-successfully'].includes(router.url)">
+	<a
+		class="facebook-bubble"
+		href="https://www.facebook.com/share/1B6HkjvGiT/?mibextid=wwXIfr"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Open ClayStudio Facebook page"
+	>
+		<img src="assets/images/facebook.png" alt="Facebook">
+	</a>
+
 	<button class="chat-bubble" (click)="toggleChat()" aria-label="Open chat">
-		<span>Chat</span>
+		<img src="assets/images/chat.png" class="chat-bubble__icon" alt="Chat">
 	</button>
 
 	<div class="chat-box" *ngIf="isChatOpen">
 		<div class="chat-box__header">
-			<strong>ClayCo Assistant</strong>
+			<strong>ClayStudio Assistant</strong>
 			<button (click)="toggleChat()">x</button>
 		</div>
 

@@ -1,9 +1,9 @@
 <div class="imgbg"><img src="assets/images/BG.png"></div>
 <div class="frame">
   <div class="content">
-    <div class="imggt"><a href="app-home"><img src="assets/images/GT(1).png"></a></div>
+    <div class="imggt"><a [routerLink]="['/app-home']"><img src="assets/images/GT(1).png"></a></div>
     <form (ngSubmit)="onSubmit()" class="login_form">
-      <h3>WELCOME TO CLAYCO</h3>
+      <h3>WELCOME TO ClayStudio</h3>
       <p class="bold">LOG IN</p>
       <div class="container">
         <div class="container__input">
@@ -29,7 +29,7 @@
         <div class="container__checkbox">
           <input type="checkbox" name="remember" class="checkbox" [(ngModel)]="rememberMe" id="rememberMe" />
           <label for="rememberMe">Remember password</label>
-          <a href="app-forgot-password">Forgot password?</a>
+          <a [routerLink]="['/app-forgot-password']">Forgot password?</a>
         </div>
 
         <div class="login_button">
@@ -38,7 +38,7 @@
       </div>
       <div class="content--bottom">
         <p>Don't have an account ?</p>
-        <a href="app-signup">Sign Up now</a>
+        <a [routerLink]="['/app-signup']">Sign Up now</a>
       </div>
     </form>
   </div>
